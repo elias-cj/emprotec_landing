@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 100" fill="none">
+  <g transform="translate(10, 15)">
+    <rect x="0" y="0" width="18" height="18" fill="#EE3124"/>
+    <rect x="22" y="0" width="18" height="18" fill="#EE3124"/>
+    <rect x="44" y="0" width="18" height="18" fill="#EE3124"/>
+    <rect x="0" y="22" width="18" height="18" fill="#EE3124"/>
+    <rect x="22" y="22" width="18" height="18" fill="#EE3124"/>
+    <rect x="44" y="22" width="18" height="18" fill="#EE3124"/>
+    <rect x="0" y="44" width="18" height="18" fill="#EE3124"/>
+    <rect x="22" y="44" width="18" height="18" fill="#EE3124"/>
+    <rect x="44" y="44" width="18" height="18" fill="#EE3124"/>
+  </g>
+  <text x="82" y="58" font-family="'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="34" fill="#EE3124" letter-spacing="1">FORTINET</text>
+</svg>
