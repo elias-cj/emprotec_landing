@@ -42,7 +42,7 @@ const cardsGrid: CardItem[] = [
   {
     id: "r3-img",
     type: "image",
-    image: "/assets/gestion-de-inventario-almacen.webp",
+    image: "/assets/blog-data-center-guide-1.jpg",
   },
   {
     id: "r3-txt",
@@ -53,7 +53,7 @@ const cardsGrid: CardItem[] = [
   // Row 4
   {
     id: "r4-txt",
-    type: "text",
+    type: "text", 
     title: "Servidores, Almacenamiento y VPN",
     description: "Configuración de servidores, almacenamiento NAS/SAN, virtualización de sistemas operativos y firewalls de red.",
   },

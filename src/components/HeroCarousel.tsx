@@ -29,7 +29,7 @@ const slideData: SlideData[] = [
     highlight: "Redes & Data Centers",
     nameSuffix: "",
     des: "Fibra Óptica, Cableado Estructurado, enlaces corporativos, radio enlaces Wi-Fi y salas de servidores de alta densidad.",
-    image: "/assets/gestion-de-inventario-almacen.webp",
+    image: "/assets/blog-data-center-guide-1.jpg",
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ const slideData: SlideData[] = [
     highlight: "Seguridad Electrónica",
     nameSuffix: "",
     des: "Cámaras CCTV, control de acceso, gestión de asistencia, alarmas perimetrales y sistemas de supresión de fuego.",
-    image: "/assets/produccion-fabricacion.webp",
+    image: "/assets/cctv.jpg",
   },
   {
     id: 4,
@@ -45,7 +45,7 @@ const slideData: SlideData[] = [
     highlight: "Respaldo UPS",
     nameSuffix: " corporativo",
     des: "Tableros eléctricos, protección contra descargas atmosféricas, regulación de voltaje y sistemas de energía ininterrumpida.",
-    image: "/assets/aprovisionamiento-y-cmpras.webp",
+    image: "/assets/ups.jpg",
   },
   {
     id: 5,
@@ -53,7 +53,7 @@ const slideData: SlideData[] = [
     highlight: "Virtualización Cloud",
     nameSuffix: "",
     des: "Configuración de servidores físicos, almacenamiento NAS/SAN, máquinas virtuales, VPNs y firewalls de red.",
-    image: "/assets/distribucion-logistica.webp",
+    image: "/assets/cloud.avif",
   },
   {
     id: 6,
