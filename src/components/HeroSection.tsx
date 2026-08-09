@@ -1,133 +1,161 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import Link from 'next/link';
-import { ShieldCheck, Server, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { Server, Network, ShieldCheck, Zap, ArrowRight, ChevronDown, Sparkles } from "lucide-react";
 
 export default function HeroSection() {
-  return (
-    <section id="inicio" className="relative min-h-screen pt-32 pb-20 flex items-center justify-center overflow-hidden tech-grid-bg transition-colors duration-400">
-      {/* Background Glowing Ambient Orbs */}
-      <div className="glow-orb-blue top-10 left-1/4 -translate-x-1/2 opacity-70 animate-pulse" />
-      <div className="glow-orb-navy bottom-10 right-10 opacity-60" />
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+  const { scrollY } = useScroll();
+  const heroScale = useTransform(scrollY, [0, 400], [1, 0.96]);
+  const heroOpacity = useTransform(scrollY, [0, 400], [1, 0.6]);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const { clientX, clientY } = e;
+    const { innerWidth, innerHeight } = window;
+    const x = (clientX / innerWidth - 0.5) * 30; // -15 to 15 deg
+    const y = (clientY / innerHeight - 0.5) * 30;
+    setMousePos({ x, y });
+  };
+
+  return (
+    <motion.section
+      id="inicio"
+      style={{ scale: heroScale, opacity: heroOpacity }}
+      onMouseMove={handleMouseMove}
+      className="relative min-h-screen pt-28 pb-16 flex flex-col justify-between bg-white dark:bg-[#181818] text-slate-900 dark:text-white overflow-hidden select-none transition-colors duration-300"
+    >
+      {/* Background Subtle Gradient Blobs */}
+      <div className="absolute top-1/4 -left-20 w-96 h-96 bg-[#4295DC]/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-10 right-0 w-[500px] h-[500px] bg-slate-100/80 dark:bg-neutral-900/40 rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 my-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          {/* Left Column: Text & CTAs */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="lg:col-span-7 flex flex-col items-start text-left"
-          >
-            {/* Top Tagline Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#4295DC]/10 border border-[#4295DC]/40 text-[#4295DC] dark:text-[#4295DC] text-xs sm:text-sm font-bold tracking-wide mb-6 shadow-sm backdrop-blur-md">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#4295DC] animate-ping" />
-              <span>Ingeniería & Servicios TIC Especializados</span>
-            </div>
+          {/* Left Column: Headlines & CTAs (Scaled Down Text) */}
+          <div className="lg:col-span-6 space-y-6 text-left">
+            
+            {/* Tag Badge */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-100 dark:bg-[#1F1F1F] border border-slate-200 dark:border-neutral-800 text-[#4295DC] text-[11px] font-bold uppercase tracking-wider"
+            >
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>EMPROTEC — Soluciones TIC & Ingeniería</span>
+            </motion.div>
 
-            {/* Main Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#0E315B] dark:text-white leading-tight mb-6 font-['Raleway'] tracking-tight">
-              Soluciones Tecnológicas <br />
-              <span className="gradient-text-blue">Avanzadas & Seguridad</span> <br />
-              para Tu Empresa
-            </h1>
+            {/* Scaled Down Headline */}
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.1 }}
+              className="text-2xl sm:text-4xl lg:text-5xl font-black text-[#0E315B] dark:text-white font-['Raleway'] tracking-tight leading-[1.15]"
+            >
+              Infraestructura tecnológica que{" "}
+              <span className="text-[#4295DC] underline decoration-[#4295DC]/30 underline-offset-6">
+                impulsa tu negocio.
+              </span>
+            </motion.h1>
 
-            {/* Paragraph Content */}
-            <p className="text-lg sm:text-xl text-[#58697d] dark:text-[#B0B1B0] mb-8 max-w-2xl leading-relaxed font-light">
-              En <strong className="text-[#0E315B] dark:text-white font-semibold">EMPROTEC</strong> proveemos equipamiento tecnológico de vanguardia, diseñamos estructuras de red de alto rendimiento y desarrollamos proyectos de seguridad integral y outsourcing IT.
-            </p>
+            {/* Scaled Down Subheadline */}
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="text-slate-600 dark:text-slate-300 text-xs sm:text-base font-light leading-relaxed max-w-xl"
+            >
+              Diseñamos, instalamos y mantenemos soluciones de alta disponibilidad: Redes de Fibra Óptica, CCTV, Data Centers, UPS y Domótica en Santa Cruz, Bolivia.
+            </motion.p>
 
-            {/* Key Quick Points */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8 w-full max-w-xl">
-              {[
-                'Infraestructura & Protección UPS',
-                'Seguridad CCTV y Control de Acceso',
-                'Climatización y Servidores TI',
-                'Contratos de Tercerización IT',
-              ].map((item, idx) => (
-                <div key={idx} className="flex items-center gap-2.5 text-sm text-[#0E315B] dark:text-[#FFFFFF] font-medium">
-                  <CheckCircle2 className="w-4.5 h-4.5 text-[#4295DC] shrink-0" />
-                  <span>{item}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* CTAs */}
-            <div className="flex flex-wrap items-center gap-4 w-full sm:w-auto">
+            {/* Actions */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.3 }}
+              className="flex flex-wrap items-center gap-3 pt-1"
+            >
               <Link
-                href="#tienda"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-[#4295DC] hover:bg-[#3482ca] text-white font-black text-base shadow-xl shadow-[#4295DC]/30 hover:shadow-[#4295DC]/60 hover:scale-105 active:scale-95 transition-all duration-300 group"
+                href="#contacto"
+                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full text-xs font-extrabold text-white bg-[#0E315B] dark:bg-[#4295DC] hover:bg-[#4295DC] dark:hover:bg-[#3480c4] shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 group"
               >
-                <span>Ver Tienda & Productos</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <span>Solicitar cotización</span>
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link
-                href="#nosotros"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white dark:bg-[#0E315B]/60 border border-[#4295DC]/40 hover:border-[#4295DC] text-[#0E315B] dark:text-white font-bold text-base shadow-sm hover:scale-105 transition-all duration-300"
-              >
-                <span>Conoce Más</span>
-              </Link>
-            </div>
-          </motion.div>
 
-          {/* Right Column: Dynamic Graphic & Card Preview */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9, y: 30 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.2 }}
-            className="lg:col-span-5 relative"
-          >
-            {/* Tech Hero Graphic Container */}
-            <div className="relative box-servicio-effect-card p-3 rounded-3xl group">
-              <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-[#0E315B]">
-                <Image
-                  src="/hero-bg.png"
-                  alt="EMPROTEC Data Center & Infrastructure"
-                  width={600}
-                  height={450}
-                  className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
-                  priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0E315B]/80 via-transparent to-transparent opacity-80" />
+              <Link
+                href="#soluciones"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-xs font-extrabold text-[#0E315B] dark:text-white bg-slate-100 dark:bg-[#1F1F1F] hover:bg-slate-200 dark:hover:bg-neutral-800 transition-colors border border-slate-200 dark:border-neutral-800"
+              >
+                <span>Explorar Soluciones</span>
+              </Link>
+            </motion.div>
+
+            {/* Micro Feature Badges */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="pt-4 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-xl"
+            >
+              <div className="flex items-center gap-1.5 text-[11px] font-bold text-slate-700 dark:text-slate-300">
+                <Server className="w-3.5 h-3.5 text-[#4295DC]" /> Data Centers
               </div>
+              <div className="flex items-center gap-1.5 text-[11px] font-bold text-slate-700 dark:text-slate-300">
+                <Network className="w-3.5 h-3.5 text-[#4295DC]" /> Fibra 10G
+              </div>
+              <div className="flex items-center gap-1.5 text-[11px] font-bold text-slate-700 dark:text-slate-300">
+                <ShieldCheck className="w-3.5 h-3.5 text-[#4295DC]" /> CCTV 4K
+              </div>
+              <div className="flex items-center gap-1.5 text-[11px] font-bold text-slate-700 dark:text-slate-300">
+                <Zap className="w-3.5 h-3.5 text-[#4295DC]" /> UPS Online
+              </div>
+            </motion.div>
 
-              {/* Floating Interactive Micro Card 1 */}
-              <motion.div
-                animate={{ y: [0, -8, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute -top-6 -left-6 bg-white/95 dark:bg-[#0E315B]/95 border border-[#4295DC]/40 p-4 rounded-2xl backdrop-blur-xl shadow-2xl flex items-center gap-3"
-              >
-                <div className="w-10 h-10 rounded-xl bg-[#4295DC]/20 flex items-center justify-center border border-[#4295DC]/40">
-                  <ShieldCheck className="w-6 h-6 text-[#4295DC]" />
-                </div>
-                <div>
-                  <div className="text-xs text-[#58697d] dark:text-[#B0B1B0]">Seguridad TI</div>
-                  <div className="text-sm font-bold text-[#0E315B] dark:text-white">100% Protegido</div>
-                </div>
-              </motion.div>
+          </div>
 
-              {/* Floating Interactive Micro Card 2 */}
-              <motion.div
-                animate={{ y: [0, 8, 0] }}
-                transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-                className="absolute -bottom-6 -right-6 bg-white/95 dark:bg-[#0E315B]/95 border border-[#4295DC]/40 p-4 rounded-2xl backdrop-blur-xl shadow-2xl flex items-center gap-3"
-              >
-                <div className="w-10 h-10 rounded-xl bg-[#4295DC]/20 flex items-center justify-center border border-[#4295DC]/40">
-                  <Server className="w-6 h-6 text-[#4295DC]" />
-                </div>
-                <div>
-                  <div className="text-xs text-[#58697d] dark:text-[#B0B1B0]">Servidores & Redes</div>
-                  <div className="text-sm font-bold text-[#0E315B] dark:text-white">Alta Disponibilidad</div>
-                </div>
-              </motion.div>
-            </div>
-          </motion.div>
+          {/* Right Column: LARGER FLOATING EMPROTEC LOGO */}
+          <div className="lg:col-span-6 relative flex justify-center items-center">
+            <motion.div
+              style={{
+                rotateY: mousePos.x,
+                rotateX: -mousePos.y,
+              }}
+              transition={{ type: "spring", stiffness: 100, damping: 20 }}
+              className="relative w-full max-w-xl flex items-center justify-center p-2 group"
+            >
+              {/* Enhanced Backlight Aura Glow */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 sm:w-[480px] h-96 sm:h-[480px] bg-[#4295DC]/20 dark:bg-[#4295DC]/35 rounded-full blur-3xl pointer-events-none group-hover:scale-110 transition-transform duration-700" />
+
+              {/* Pure Floating Logo Image (Larger Size) */}
+              <Image
+                src="/assets/logo/logo_emprotec.png"
+                alt="EMPROTEC Logo Oficial"
+                width={700}
+                height={280}
+                className="w-full max-w-[480px] sm:max-w-[600px] h-auto object-contain group-hover:scale-105 transition-transform duration-700 filter drop-shadow-[0_20px_40px_rgba(66,149,220,0.35)]"
+                priority
+              />
+            </motion.div>
+          </div>
 
         </div>
       </div>
-    </section>
+
+      {/* Floating Scroll Indicator */}
+      <div className="relative z-10 flex justify-center pt-6">
+        <a
+          href="#seccion-movimiento"
+          className="inline-flex items-center gap-2 text-xs font-extrabold text-slate-400 hover:text-[#4295DC] uppercase tracking-widest transition-colors animate-bounce"
+        >
+          <span>SCROLL</span>
+          <ChevronDown className="w-4 h-4 text-[#4295DC]" />
+        </a>
+      </div>
+    </motion.section>
   );
 }

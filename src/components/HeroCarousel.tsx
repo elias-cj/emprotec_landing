@@ -1,356 +1,246 @@
 "use client";
 
-import { useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeft, ChevronRight, Shield, Network, Server, Cpu, ArrowRight, Sparkles } from "lucide-react";
 
-interface SlideData {
+export interface HeroSlide {
   id: number;
-  name: string;
-  highlight: string;
-  nameSuffix: string;
-  des: string;
+  categoryTag: string;
+  title: string;
+  subtitleHighlight: string;
+  description: string;
   image: string;
+  icon: any;
 }
 
-const slideData: SlideData[] = [
+const HERO_SLIDES: HeroSlide[] = [
   {
     id: 1,
-    name: "EMPROTEC — Soluciones Tecnológicas e ",
-    highlight: "Ingeniería",
-    nameSuffix: " para tu empresa",
-    des: "Soluciones personalizadas para tu hogar o empresa. Proveemos e instalamos equipamiento de alta calidad en redes, seguridad y energía.",
-    image: "/assets/logo/logo_emprotec.png",
+    categoryTag: "Seguridad Electrónica",
+    title: "Sistemas de Videovigilancia CCTV, Control de Acceso & ",
+    subtitleHighlight: "Alarmas Perimetrales",
+    description: "Protección integral para tu hogar y empresa con cámaras 4K, análisis inteligente de video y sensores perimetrales contra incendios.",
+    image: "/assets/cctv.jpg",
+    icon: Shield,
   },
   {
     id: 2,
-    name: "Diseño, implementación y cableado de ",
-    highlight: "Redes & Data Centers",
-    nameSuffix: "",
-    des: "Fibra Óptica, Cableado Estructurado, enlaces corporativos, radio enlaces Wi-Fi y salas de servidores de alta densidad.",
+    categoryTag: "Redes & Conectividad",
+    title: "Cableado de Fibra Óptica, Estructurado & ",
+    subtitleHighlight: "Redes WiFi 6",
+    description: "Conexión de alta velocidad con certificación internacional, radio enlaces punto a punto y armados de tableros de red.",
     image: "/assets/blog-data-center-guide-1.jpg",
+    icon: Network,
   },
   {
     id: 3,
-    name: "Sistemas de Videovigilancia, CCTV & ",
-    highlight: "Seguridad Electrónica",
-    nameSuffix: "",
-    des: "Cámaras CCTV, control de acceso, gestión de asistencia, alarmas perimetrales y sistemas de supresión de fuego.",
-    image: "/assets/cctv.jpg",
+    categoryTag: "Servidores e Infraestructura",
+    title: "Virtualización Cloud, Almacenamiento NAS/SAN & ",
+    subtitleHighlight: "Respaldo UPS",
+    description: "Infraestructura robusta con prevención de caídas eléctricas, servidores de alta densidad y firewalls UTM perimetrales.",
+    image: "/assets/ups.jpg",
+    icon: Server,
   },
   {
     id: 4,
-    name: "Infraestructura Eléctrica & ",
-    highlight: "Respaldo UPS",
-    nameSuffix: " corporativo",
-    des: "Tableros eléctricos, protección contra descargas atmosféricas, regulación de voltaje y sistemas de energía ininterrumpida.",
-    image: "/assets/ups.jpg",
-  },
-  {
-    id: 5,
-    name: "Servidores, Almacenamiento & ",
-    highlight: "Virtualización Cloud",
-    nameSuffix: "",
-    des: "Configuración de servidores físicos, almacenamiento NAS/SAN, máquinas virtuales, VPNs y firewalls de red.",
-    image: "/assets/cloud.avif",
-  },
-  {
-    id: 6,
-    name: "Domótica & Climatización de ",
-    highlight: "Precisión",
-    nameSuffix: "",
-    des: "Automatización de luces, portones y control de temperatura, humedad y filtrado para salas de servidores críticas.",
+    categoryTag: "Automatización & Domótica",
+    title: "Automatización de Luces, Portones & ",
+    subtitleHighlight: "Climatización de Precisión",
+    description: "Smart Home y entornos corporativos automatizados con control inteligente de voz, sensores y filtrado ambiental.",
     image: "/assets/comercializacion-ventas.webp",
+    icon: Cpu,
   },
 ];
 
 export default function HeroCarousel() {
-  const slideRef = useRef<HTMLDivElement>(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
-  const handleNext = () => {
-    if (!slideRef.current) return;
-    const items = slideRef.current.querySelectorAll(".item");
-    if (items.length > 0) {
-      slideRef.current.appendChild(items[0]);
-    }
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
   };
 
-  const handlePrev = () => {
-    if (!slideRef.current) return;
-    const items = slideRef.current.querySelectorAll(".item");
-    if (items.length > 0) {
-      slideRef.current.prepend(items[items.length - 1]);
-    }
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + HERO_SLIDES.length) % HERO_SLIDES.length);
   };
 
-  const handleItemClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    const target = e.target as HTMLElement;
-    if (target.closest("a, button, .see-more-btn, .button-controls")) {
-      return;
+  // Auto slide every 5 seconds unless paused
+  useEffect(() => {
+    if (!isPaused) {
+      timerRef.current = setInterval(() => {
+        nextSlide();
+      }, 5000);
     }
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
+  }, [isPaused, currentSlide]);
 
-    if (!slideRef.current) return;
-    const items = Array.from(slideRef.current.querySelectorAll(".item"));
-    const clickedItem = e.currentTarget;
-    const clickedIndex = items.indexOf(clickedItem);
-
-    if (clickedIndex === 0) {
-      handlePrev();
-    } else if (clickedIndex >= 2) {
-      const steps = clickedIndex - 1;
-      for (let i = 0; i < steps; i++) {
-        handleNext();
-      }
-    }
-  };
+  const slide = HERO_SLIDES[currentSlide];
+  const IconComp = slide.icon;
 
   return (
-    <section className="relative w-full h-[88vh] min-h-[600px] max-h-[800px] pt-16 bg-[#191715] text-white overflow-hidden select-none">
-      <div className="carousel-container relative w-full h-full">
-        {/* Slide Container */}
-        <div ref={slideRef} className="slide absolute inset-0 w-full h-full">
-          {slideData.map((item) => (
-            <div key={item.id} className="item" onClick={handleItemClick}>
-              {/* Background Image */}
-              <Image
-                src={item.image}
-                alt={item.name}
-                fill
-                className={
-                  item.image.includes("logo")
-                    ? "object-contain p-4 bg-white/95 dark:bg-[#191715]/95"
-                    : "object-cover object-center"
-                }
-                priority
-              />
+    <section
+      id="inicio"
+      className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 bg-[#0E315B] text-white overflow-hidden select-none transition-colors duration-300"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
+      {/* Background Gradient Orbs */}
+      <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-[#4295DC]/15 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#0E315B]/40 rounded-full blur-[140px] pointer-events-none" />
 
-              {/* Dark Gradient Overlay for text side on main slide */}
-              <div className="overlay-gradient absolute inset-0 bg-gradient-to-r from-[#191715]/75 via-[#191715]/20 to-transparent pointer-events-none" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center min-h-[500px]">
 
-              {/* Slide Text Content */}
-              <div className="content">
-                <h1 className="name font-sans">
-                  {item.name}
-                  <span className="text-[#4295DC] underline decoration-[#4295DC]/40 decoration-wavy">
-                    {item.highlight}
-                  </span>
-                  {item.nameSuffix}
+          {/* Left Side: Content & Buttons */}
+          <div className="lg:col-span-7 space-y-6">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={slide.id}
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 30 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                className="space-y-5"
+              >
+                {/* Small Tag */}
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#4295DC]/20 border border-[#4295DC]/40 text-[#4295DC] text-xs font-bold uppercase tracking-wider">
+                  <Sparkles className="w-3.5 h-3.5" />
+                  <span>Soluciones Tecnológicas — {slide.categoryTag}</span>
+                </div>
+
+                {/* Main Headline */}
+                <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight font-['Raleway']">
+                  Soluciones personalizadas para tu <span className="text-[#4295DC]">hogar o empresa</span>.
                 </h1>
 
-                <p className="des">{item.des}</p>
+                {/* Specific Slide Subheadline */}
+                <h2 className="text-lg sm:text-xl font-bold text-slate-200">
+                  {slide.title}
+                  <span className="text-[#4295DC] underline underline-offset-4 decoration-[#4295DC]/40">
+                    {slide.subtitleHighlight}
+                  </span>
+                </h2>
 
-                <div className="pt-2">
-                  <Link href="#contacto" className="see-more-btn">
-                    Saber más &gt;
+                {/* Standard Description */}
+                <p className="text-slate-300 text-sm sm:text-base font-light leading-relaxed max-w-2xl">
+                  Proveemos e instalamos equipamiento de alta calidad y soluciones tecnológicas adaptadas a las necesidades de cada cliente en Santa Cruz, Bolivia.
+                </p>
+
+                {/* CTAs */}
+                <div className="flex flex-wrap items-center gap-4 pt-4">
+                  <Link
+                    href="#productos"
+                    className="px-7 py-3.5 rounded-xl text-xs font-extrabold text-white bg-[#4295DC] hover:bg-[#3480c4] shadow-lg shadow-cyan-500/25 transition-all duration-300 transform hover:-translate-y-0.5 flex items-center gap-2"
+                  >
+                    <span>Ver productos</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+
+                  <Link
+                    href="#contacto"
+                    className="px-7 py-3.5 rounded-xl text-xs font-extrabold text-white bg-slate-800/80 hover:bg-slate-700 border border-slate-700 transition-all duration-300"
+                  >
+                    Solicitar cotización
                   </Link>
                 </div>
-              </div>
-            </div>
-          ))}
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* Right Side: Technological Image Visual */}
+          <div className="lg:col-span-5 relative flex justify-center">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={slide.id}
+                initial={{ opacity: 0, scale: 0.92, rotate: -1 }}
+                animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                exit={{ opacity: 0, scale: 0.92, rotate: 1 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                className="relative w-full aspect-4/3 sm:aspect-16/10 lg:aspect-4/3 rounded-3xl overflow-hidden shadow-2xl border border-[#4295DC]/40 group"
+              >
+                <Image
+                  src={slide.image}
+                  alt={slide.categoryTag}
+                  fill
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                  priority
+                />
+
+                {/* Dark Overlay Gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0E315B]/90 via-transparent to-transparent pointer-events-none" />
+
+                {/* Slide Icon Pill */}
+                <div className="absolute bottom-5 left-5 right-5 p-4 rounded-2xl bg-[#0E315B]/85 backdrop-blur-md border border-[#4295DC]/30 flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-[#4295DC] flex items-center justify-center text-white font-bold">
+                      <IconComp className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <span className="text-[10px] font-bold text-[#4295DC] uppercase tracking-wider block">
+                        EMPROTEC Bolivia
+                      </span>
+                      <h3 className="text-xs font-extrabold text-white font-['Raleway']">
+                        {slide.categoryTag}
+                      </h3>
+                    </div>
+                  </div>
+
+                  <span className="text-[11px] font-bold text-slate-300 bg-slate-800 px-2.5 py-1 rounded-md border border-slate-700">
+                    {currentSlide + 1} / {HERO_SLIDES.length}
+                  </span>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
         </div>
 
-        {/* Buttons Controls */}
-        <div className="button-controls">
-          <button onClick={handlePrev} className="btn-prev" aria-label="Anterior" title="Anterior">
-            <ChevronLeft className="w-6 h-6" />
-          </button>
-          <button onClick={handleNext} className="btn-next" aria-label="Siguiente" title="Siguiente">
-            <ChevronRight className="w-6 h-6" />
-          </button>
+        {/* Carousel Controls & Position Indicators */}
+        <div className="mt-10 pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+          
+          {/* Position Dot Indicators */}
+          <div className="flex items-center space-x-2">
+            {HERO_SLIDES.map((item, idx) => (
+              <button
+                key={item.id}
+                onClick={() => setCurrentSlide(idx)}
+                className={`h-2.5 rounded-full transition-all duration-300 ${
+                  currentSlide === idx
+                    ? "w-8 bg-[#4295DC]"
+                    : "w-2.5 bg-slate-700 hover:bg-slate-500"
+                }`}
+                aria-label={`Ir al slide ${idx + 1}`}
+              />
+            ))}
+          </div>
+
+          {/* Prev / Next Manual Buttons */}
+          <div className="flex items-center space-x-3">
+            <button
+              onClick={prevSlide}
+              className="p-3 rounded-xl bg-slate-800/80 text-white hover:bg-[#4295DC] border border-slate-700 transition-all duration-300"
+              aria-label="Slide anterior"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+
+            <button
+              onClick={nextSlide}
+              className="p-3 rounded-xl bg-slate-800/80 text-white hover:bg-[#4295DC] border border-slate-700 transition-all duration-300"
+              aria-label="Slide siguiente"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
+
         </div>
       </div>
-
-      {/* CSS Rules matching exact user code behavior */}
-      <style jsx global>{`
-        .carousel-container .slide .item {
-          width: 200px;
-          height: 300px;
-          position: absolute;
-          top: 50%;
-          transform: translate(0, -50%);
-          border-radius: 20px;
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-          border: 2px solid rgba(66, 149, 220, 0.4);
-          background-position: 50% 50%;
-          background-size: cover;
-          display: inline-block;
-          transition: 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-          overflow: hidden;
-          cursor: pointer;
-        }
-
-        .slide .item:nth-child(1),
-        .slide .item:nth-child(2) {
-          top: 0;
-          left: 0;
-          transform: translate(0, 0);
-          border-radius: 0;
-          width: 100%;
-          height: 100%;
-          border: none;
-          box-shadow: none;
-          cursor: default;
-        }
-
-        .slide .item:nth-child(3) {
-          left: 50%;
-        }
-        .slide .item:nth-child(4) {
-          left: calc(50% + 220px);
-        }
-        .slide .item:nth-child(5) {
-          left: calc(50% + 440px);
-        }
-        .slide .item:nth-child(n + 6) {
-          left: calc(50% + 660px);
-          opacity: 0;
-          pointer-events: none;
-        }
-
-        @media (min-width: 1366px) {
-          .slide .item:nth-child(3) {
-            left: calc(100% - 700px);
-          }
-          .slide .item:nth-child(4) {
-            left: calc(100% - 480px);
-          }
-          .slide .item:nth-child(5) {
-            left: calc(100% - 260px);
-          }
-          .slide .item:nth-child(n + 6) {
-            left: calc(100% - 40px);
-            opacity: 0;
-            pointer-events: none;
-          }
-        }
-
-        .item .content {
-          position: absolute;
-          top: 50%;
-          left: 60px;
-          max-width: 550px;
-          text-align: left;
-          color: #fff;
-          transform: translate(0, -50%);
-          display: none;
-          z-index: 30;
-        }
-
-        @media (max-width: 640px) {
-          .item .content {
-            left: 24px;
-            right: 24px;
-            max-width: 100%;
-          }
-          .slide .item:nth-child(3) {
-            left: 60%;
-            width: 140px;
-            height: 220px;
-          }
-          .slide .item:nth-child(4) {
-            left: calc(60% + 150px);
-            width: 140px;
-            height: 220px;
-          }
-        }
-
-        .slide .item:nth-child(2) .content {
-          display: block;
-        }
-
-        .slide .item:nth-child(n + 3) .overlay-gradient {
-          display: none;
-        }
-
-        .content .name {
-          font-size: clamp(24px, 4vw, 44px);
-          font-weight: 900;
-          line-height: 1.2;
-          opacity: 0;
-          animation: animate 0.8s ease-in-out 1 forwards;
-          text-shadow: 0 2px 16px rgba(0, 0, 0, 0.85);
-        }
-
-        .content .des {
-          margin-top: 12px;
-          margin-bottom: 20px;
-          font-size: clamp(12px, 1.8vw, 15px);
-          color: #e0e0e0;
-          line-height: 1.6;
-          opacity: 0;
-          animation: animate 0.8s ease-in-out 0.2s 1 forwards;
-          text-shadow: 0 1px 10px rgba(0, 0, 0, 0.85);
-        }
-
-        .content .see-more-btn {
-          display: inline-block;
-          padding: 12px 28px;
-          border-radius: 6px;
-          font-size: 13px;
-          font-weight: bold;
-          color: #ffffff;
-          background-color: #4295dc;
-          box-shadow: 0 10px 25px rgba(66, 149, 220, 0.3);
-          transition: all 0.3s ease;
-          opacity: 0;
-          animation: animate 0.8s ease-in-out 0.4s 1 forwards;
-        }
-
-        .content .see-more-btn:hover {
-          background-color: #3480c4;
-          transform: translateY(-2px);
-        }
-
-        @keyframes animate {
-          from {
-            opacity: 0;
-            transform: translate(0, 80px);
-            filter: blur(25px);
-          }
-          to {
-            opacity: 1;
-            transform: translate(0, 0);
-            filter: blur(0);
-          }
-        }
-
-        .button-controls {
-          position: absolute;
-          bottom: 30px;
-          left: 60px;
-          z-index: 40;
-          display: flex;
-          gap: 12px;
-        }
-
-        @media (max-width: 640px) {
-          .button-controls {
-            left: 24px;
-            bottom: 24px;
-          }
-        }
-
-        .button-controls button {
-          width: 48px;
-          height: 48px;
-          border-radius: 12px;
-          border: 1px solid rgba(66, 149, 220, 0.4);
-          background: rgba(14, 49, 91, 0.85);
-          color: #ffffff;
-          cursor: pointer;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          transition: all 0.3s ease;
-          backdrop-filter: blur(8px);
-        }
-
-        .button-controls button:hover {
-          background: #4295dc;
-          transform: scale(1.05);
-        }
-      `}</style>
     </section>
   );
 }
