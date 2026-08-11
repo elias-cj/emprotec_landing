@@ -32,7 +32,7 @@ export default function ServiceDetailModal({ service, onClose }: ServiceDetailMo
           initial={{ opacity: 0, scale: 0.9, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.9, y: 20 }}
-          className="relative w-full max-w-lg bg-white dark:bg-[#0E315B] rounded-3xl p-6 sm:p-8 shadow-2xl border border-[#4295DC]/30 text-[#0E315B] dark:text-white"
+          className="relative w-full max-w-lg bg-white dark:bg-[#1E293B] rounded-3xl p-6 sm:p-8 shadow-2xl border border-[#4295DC]/30 text-[#0E315B] dark:text-white"
         >
           {/* Close button */}
           <button
@@ -58,7 +58,7 @@ export default function ServiceDetailModal({ service, onClose }: ServiceDetailMo
             {service.tags.map((tag, idx) => (
               <span
                 key={idx}
-                className="text-[11px] font-semibold bg-slate-100 dark:bg-[#191715]/80 text-[#0E315B] dark:text-[#B0B1B0] px-2.5 py-0.5 rounded-md border border-slate-200 dark:border-slate-700"
+                className="text-[11px] font-semibold bg-slate-100 dark:bg-slate-800 text-[#0E315B] dark:text-slate-200 px-2.5 py-0.5 rounded-md border border-slate-200 dark:border-slate-700"
               >
                 #{tag}
               </span>
@@ -66,12 +66,12 @@ export default function ServiceDetailModal({ service, onClose }: ServiceDetailMo
           </div>
 
           {/* Description */}
-          <p className="text-xs sm:text-sm text-slate-600 dark:text-[#B0B1B0] font-light leading-relaxed mb-6">
+          <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-light leading-relaxed mb-6">
             {service.description}
           </p>
 
           {/* Highlights */}
-          <div className="space-y-2.5 mb-8 bg-slate-50 dark:bg-[#081e38] p-4 rounded-2xl border border-slate-200/60 dark:border-slate-800">
+          <div className="space-y-2.5 mb-8 bg-slate-50 dark:bg-[#162238] p-4 rounded-2xl border border-slate-200/60 dark:border-slate-700/60">
             <h4 className="text-xs font-extrabold uppercase tracking-wider text-[#4295DC] flex items-center gap-1.5 mb-3">
               <ShieldCheck className="w-4 h-4" /> Ventajas & Especificaciones Técnicas
             </h4>

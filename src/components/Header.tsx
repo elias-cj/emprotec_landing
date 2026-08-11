@@ -38,7 +38,7 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-white/90 dark:bg-[#181818]/90 backdrop-blur-md py-3 border-b border-slate-200/80 dark:border-neutral-800 shadow-sm"
+          ? "bg-white/90 dark:bg-[#0F172A]/95 backdrop-blur-md py-3 border-b border-slate-200/80 dark:border-slate-700/60 shadow-sm"
           : "bg-transparent py-5"
       }`}
     >
@@ -76,7 +76,7 @@ export default function Header() {
           {/* Theme Switcher Toggle Button */}
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-full bg-slate-100 dark:bg-[#1F1F1F] text-slate-700 dark:text-amber-400 hover:bg-slate-200 dark:hover:bg-neutral-800 transition-colors"
+            className="p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-amber-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
             title={theme === "dark" ? "Cambiar a Modo Claro" : "Cambiar a Modo Oscuro"}
             aria-label="Cambiar tema de color"
           >
@@ -105,7 +105,7 @@ export default function Header() {
           {/* Mobile Theme Toggle Button */}
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-full bg-slate-100 dark:bg-[#1F1F1F] text-slate-700 dark:text-amber-400 focus:outline-none"
+            className="p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-amber-400 focus:outline-none"
             aria-label="Cambiar tema de color"
           >
             {theme === "dark" ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5 text-slate-700" />}
@@ -130,7 +130,7 @@ export default function Header() {
             animate={{ opacity: 1, height: "100vh" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="fixed inset-0 top-[60px] bg-white dark:bg-[#181818] z-40 px-6 py-10 flex flex-col justify-between border-t border-slate-200 dark:border-neutral-800 overflow-y-auto"
+            className="fixed inset-0 top-[60px] bg-white dark:bg-[#0F172A] z-40 px-6 py-10 flex flex-col justify-between border-t border-slate-200 dark:border-slate-700/60 overflow-y-auto"
           >
             <div className="space-y-6">
               <span className="text-[11px] font-black uppercase tracking-widest text-[#4295DC] block">

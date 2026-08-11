@@ -35,13 +35,13 @@ export default function EditorialProjectsSection() {
   ];
 
   return (
-    <section id="proyectos" className="py-24 bg-slate-50 dark:bg-[#181818] text-slate-900 dark:text-white relative overflow-hidden transition-colors duration-300">
+    <section id="proyectos" className="py-24 bg-slate-50 dark:bg-[#0F172A] text-slate-900 dark:text-white relative overflow-hidden transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="max-w-2xl space-y-2">
-            <span className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-widest text-[#4295DC] bg-white dark:bg-[#1F1F1F] px-4 py-1.5 rounded-full border border-slate-200 dark:border-neutral-800">
+            <span className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-widest text-[#4295DC] bg-white dark:bg-slate-800 px-4 py-1.5 rounded-full border border-slate-200 dark:border-slate-700/60">
               <Sparkles className="w-3.5 h-3.5" /> SECCIÓN 07 — CASOS DE ÉXITO REGIONALES
             </span>
             <h2 className="text-3xl sm:text-5xl font-black text-[#0E315B] dark:text-white font-['Raleway'] tracking-tight">
@@ -65,9 +65,9 @@ export default function EditorialProjectsSection() {
           <motion.div
             whileHover={{ y: -6 }}
             transition={{ duration: 0.4 }}
-            className="lg:col-span-7 bg-white dark:bg-[#1F1F1F] rounded-3xl overflow-hidden shadow-2xl border border-slate-200/80 dark:border-neutral-800 group flex flex-col justify-between"
+            className="lg:col-span-7 bg-white dark:bg-[#1E293B] rounded-3xl overflow-hidden shadow-2xl border border-slate-200/80 dark:border-slate-700/60 group flex flex-col justify-between"
           >
-            <div className="relative w-full aspect-16/10 overflow-hidden bg-[#181818]">
+            <div className="relative w-full aspect-16/10 overflow-hidden bg-slate-800">
               <Image
                 src={mainProject.image}
                 alt={mainProject.title}
@@ -103,9 +103,9 @@ export default function EditorialProjectsSection() {
                 key={idx}
                 whileHover={{ x: 6 }}
                 transition={{ duration: 0.3 }}
-                className="bg-white dark:bg-[#1F1F1F] p-5 rounded-3xl shadow-xl border border-slate-200/80 dark:border-neutral-800 flex items-center gap-5 group cursor-pointer"
+                className="bg-white dark:bg-[#1E293B] p-5 rounded-3xl shadow-xl border border-slate-200/80 dark:border-slate-700/60 flex items-center gap-5 group cursor-pointer"
               >
-                <div className="relative w-28 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-200 dark:bg-neutral-800">
+                <div className="relative w-28 h-24 rounded-2xl overflow-hidden shrink-0 bg-slate-200 dark:bg-slate-700/60">
                   <Image
                     src={item.image}
                     alt={item.title}

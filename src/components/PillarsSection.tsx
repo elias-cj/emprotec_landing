@@ -29,7 +29,7 @@ export default function PillarsSection() {
   ];
 
   return (
-    <section id="pilares" className="py-24 relative overflow-hidden bg-gray-50 dark:bg-[#081e38] transition-colors duration-400">
+    <section id="pilares" className="py-24 relative overflow-hidden bg-gray-50 dark:bg-[#0F172A] transition-colors duration-400">
       <div className="glow-orb-blue top-1/2 left-0 -translate-y-1/2 opacity-30" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

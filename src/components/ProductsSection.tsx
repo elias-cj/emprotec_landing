@@ -171,7 +171,7 @@ export default function ProductsSection({ onAddToCart }: ProductsSectionProps) {
   };
 
   return (
-    <section id="productos" className="py-24 relative overflow-hidden bg-gray-50 dark:bg-[#081e38] transition-colors duration-400">
+    <section id="productos" className="py-24 relative overflow-hidden bg-gray-50 dark:bg-[#0F172A] transition-colors duration-400">
       <div className="glow-orb-blue top-1/4 right-10 opacity-30 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -186,13 +186,13 @@ export default function ProductsSection({ onAddToCart }: ProductsSectionProps) {
             Productos <span className="text-[#4295DC]">destacados</span>
           </h2>
 
-          <p className="text-[#58697d] dark:text-[#B0B1B0] text-sm sm:text-base font-light leading-relaxed">
+          <p className="text-[#58697d] dark:text-slate-300 text-sm sm:text-base font-light leading-relaxed">
             Equipamiento original certificado con garantía directa de fábrica. Filtra por categoría o marca líder.
           </p>
         </div>
 
         {/* Filter Navigation Bar */}
-        <div className="bg-white dark:bg-[#0E315B] p-5 rounded-3xl shadow-xl border border-slate-200 dark:border-[#4295DC]/30 mb-10 space-y-4">
+        <div className="bg-white dark:bg-[#1E293B] p-5 rounded-3xl shadow-xl border border-slate-200 dark:border-slate-700/60 mb-10 space-y-4">
           
           <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
             
@@ -224,7 +224,7 @@ export default function ProductsSection({ onAddToCart }: ProductsSectionProps) {
                 placeholder="Buscar por marca o modelo..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 rounded-full bg-white dark:bg-[#0b1c30] border border-[#4295DC]/45 text-[#0E315B] dark:text-white placeholder-gray-400 text-xs focus:outline-none focus:border-[#4295DC] focus:ring-2 focus:ring-[#4295DC]/20 transition-all"
+                className="w-full pl-10 pr-4 py-2 rounded-full bg-white dark:bg-[#162238] border border-[#4295DC]/45 text-[#0E315B] dark:text-white placeholder-gray-400 text-xs focus:outline-none focus:border-[#4295DC] focus:ring-2 focus:ring-[#4295DC]/20 transition-all"
               />
             </div>
 
@@ -264,7 +264,7 @@ export default function ProductsSection({ onAddToCart }: ProductsSectionProps) {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.3 }}
-                className="bg-white dark:bg-[#0E315B] rounded-3xl p-6 shadow-xl border border-slate-200 dark:border-[#4295DC]/30 flex flex-col justify-between group relative hover:border-[#4295DC] transition-all duration-300"
+                className="bg-white dark:bg-[#1E293B] rounded-3xl p-6 shadow-xl border border-slate-200 dark:border-slate-700/60 flex flex-col justify-between group relative hover:border-[#4295DC] transition-all duration-300"
               >
                 {product.popular && (
                   <div className="absolute top-4 right-4 z-10 bg-[#4295DC] text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-full shadow-md flex items-center gap-1">
@@ -289,7 +289,7 @@ export default function ProductsSection({ onAddToCart }: ProductsSectionProps) {
                   </h3>
 
                   {/* Description */}
-                  <p className="text-[#58697d] dark:text-[#B0B1B0] text-xs font-light leading-relaxed mb-4 line-clamp-2">
+                  <p className="text-[#58697d] dark:text-slate-300 text-xs font-light leading-relaxed mb-4 line-clamp-2">
                     {product.description}
                   </p>
 
@@ -298,7 +298,7 @@ export default function ProductsSection({ onAddToCart }: ProductsSectionProps) {
                     {product.tags.map((tag, tIdx) => (
                       <span
                         key={tIdx}
-                        className="text-[10px] font-semibold bg-slate-100 dark:bg-[#081e38] text-[#0E315B] dark:text-[#B0B1B0] px-2 py-0.5 rounded border border-slate-200 dark:border-slate-800"
+                        className="text-[10px] font-semibold bg-slate-100 dark:bg-slate-800 text-[#0E315B] dark:text-slate-200 px-2 py-0.5 rounded border border-slate-200 dark:border-slate-700"
                       >
                         #{tag}
                       </span>

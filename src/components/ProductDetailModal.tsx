@@ -32,7 +32,7 @@ export default function ProductDetailModal({
           initial={{ opacity: 0, scale: 0.9, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.9, y: 20 }}
-          className="relative w-full max-w-3xl bg-white dark:bg-[#0E315B] rounded-3xl p-6 sm:p-8 shadow-2xl border border-[#4295DC]/30 text-[#0E315B] dark:text-white max-h-[90vh] overflow-y-auto my-auto"
+          className="relative w-full max-w-3xl bg-white dark:bg-[#1E293B] rounded-3xl p-6 sm:p-8 shadow-2xl border border-[#4295DC]/30 text-[#0E315B] dark:text-white max-h-[90vh] overflow-y-auto my-auto"
         >
           {/* Close button */}
           <button
@@ -47,7 +47,7 @@ export default function ProductDetailModal({
             
             {/* Left Image Column */}
             <div className="md:col-span-5 space-y-4">
-              <div className="relative w-full aspect-square rounded-2xl overflow-hidden bg-slate-100 dark:bg-[#081e38] border border-slate-200 dark:border-slate-800 p-4 flex items-center justify-center">
+              <div className="relative w-full aspect-square rounded-2xl overflow-hidden bg-slate-100 dark:bg-[#162238] border border-slate-200 dark:border-slate-700/60 p-4 flex items-center justify-center">
                 <Image
                   src={product.image || "/assets/blog-data-center-guide-1.jpg"}
                   alt={product.name}
@@ -56,7 +56,7 @@ export default function ProductDetailModal({
                 />
               </div>
 
-              <div className="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 bg-slate-50 dark:bg-[#081e38] p-3 rounded-xl border border-slate-200/60 dark:border-slate-800">
+              <div className="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 bg-slate-50 dark:bg-[#162238] p-3 rounded-xl border border-slate-200/60 dark:border-slate-700/60">
                 <span className="flex items-center gap-1">
                   <Box className="w-3.5 h-3.5 text-[#4295DC]" /> SKU: {sku}
                 </span>
@@ -84,7 +84,7 @@ export default function ProductDetailModal({
               </div>
 
               {/* Pricing */}
-              <div className="p-4 rounded-2xl bg-slate-50 dark:bg-[#081e38] border border-slate-200/80 dark:border-slate-800 flex items-baseline justify-between">
+              <div className="p-4 rounded-2xl bg-slate-50 dark:bg-[#162238] border border-slate-200/80 dark:border-slate-700/60 flex items-baseline justify-between">
                 <div>
                   <span className="text-3xl font-black text-[#0E315B] dark:text-white font-['Raleway']">
                     ${product.price.toLocaleString("en-US", { minimumFractionDigits: 2 })} USD
@@ -100,7 +100,7 @@ export default function ProductDetailModal({
               </div>
 
               {/* Description */}
-              <p className="text-xs sm:text-sm text-slate-600 dark:text-[#B0B1B0] font-light leading-relaxed">
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-light leading-relaxed">
                 {product.description}
               </p>
 
@@ -113,7 +113,7 @@ export default function ProductDetailModal({
                   {product.tags.map((tag, idx) => (
                     <span
                       key={idx}
-                      className="text-xs font-semibold bg-slate-100 dark:bg-[#191715] text-[#0E315B] dark:text-slate-200 px-3 py-1 rounded-lg border border-slate-200 dark:border-slate-700"
+                      className="text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-[#0E315B] dark:text-slate-200 px-3 py-1 rounded-lg border border-slate-200 dark:border-slate-700"
                     >
                       #{tag}
                     </span>

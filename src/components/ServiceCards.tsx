@@ -90,7 +90,7 @@ const cardsGrid: CardItem[] = [
 
 export default function ServiceCards() {
   return (
-    <section id="soluciones" className="py-24 bg-gradient-to-b from-[#F8FAFC] via-[#EBF3FA] to-[#F8FAFC] dark:from-[#191715] dark:via-[#0E315B] dark:to-[#191715] relative text-[#0E315B] dark:text-white overflow-x-clip transition-colors duration-300">
+    <section id="soluciones" className="py-24 bg-gradient-to-b from-[#F8FAFC] via-[#EBF3FA] to-[#F8FAFC] dark:from-[#0F172A] dark:via-[#162238] dark:to-[#0F172A] relative text-[#0E315B] dark:text-white overflow-x-clip transition-colors duration-300">
       {/* Background radial glows using palette #4295DC */}
       <div className="absolute top-0 left-0 w-96 h-full bg-gradient-to-r from-[#4295DC]/20 via-transparent to-transparent blur-[140px] pointer-events-none" />
       <div className="absolute top-0 right-0 w-96 h-full bg-gradient-to-l from-[#0E315B]/40 via-transparent to-transparent blur-[140px] pointer-events-none" />
@@ -142,7 +142,7 @@ export default function ServiceCards() {
             </div>
 
             {/* Description Paragraph */}
-            <p className="text-xs sm:text-sm text-[#5A6B80] dark:text-[#B0B1B0] font-light leading-relaxed pt-2">
+            <p className="text-xs sm:text-sm text-[#5A6B80] dark:text-slate-300 font-light leading-relaxed pt-2">
               Nuestros servicios son totalmente agnósticos a las marcas y tecnologías, lo que nos permite ofrecerte las mejores soluciones personalizadas, independientemente de la estructura tecnológica existente en tu negocio.
             </p>
 
@@ -186,7 +186,7 @@ export default function ServiceCards() {
                   </div>
                 ) : (
                   /* Dark / Light Text Card with Flip / Hover Reveal */
-                  <div className="relative w-full h-full bg-white dark:bg-[#0E315B] p-6 flex flex-col items-center justify-center text-center transition-colors duration-300 group-hover:bg-slate-50 dark:group-hover:bg-[#123E73]">
+                  <div className="relative w-full h-full bg-white dark:bg-[#1E293B] p-6 flex flex-col items-center justify-center text-center transition-colors duration-300 group-hover:bg-slate-50 dark:group-hover:bg-[#25354C]">
                     {/* Normal Front View */}
                     <div className="space-y-3 transition-opacity duration-300 group-hover:opacity-10 group-hover:pointer-events-none">
                       <h3 className="text-lg sm:text-xl font-extrabold text-[#0E315B] dark:text-white leading-snug px-2">
@@ -195,7 +195,7 @@ export default function ServiceCards() {
                     </div>
 
                     {/* Hover Reveal View */}
-                    <div className="absolute inset-0 p-6 flex flex-col items-center justify-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/95 dark:bg-[#0E315B]/95 backdrop-blur-sm space-y-3">
+                    <div className="absolute inset-0 p-6 flex flex-col items-center justify-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/95 dark:bg-[#1E293B]/95 backdrop-blur-sm space-y-3">
                       <h3 className="text-base font-extrabold text-[#4295DC]">
                         {card.title}
                       </h3>

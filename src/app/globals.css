@@ -20,12 +20,12 @@
   }
 
   .dark {
-    /* Dark Theme Defaults */
-    --bg-page: #191715;
-    --text-primary: #FFFFFF;
-    --text-muted: #B0B1B0;
-    --card-bg: #0E315B;
-    --card-border: rgba(66, 149, 220, 0.4);
+    /* Dark Theme Defaults - Soft, Refined Slate-Navy Dark Mode */
+    --bg-page: #0F172A;
+    --text-primary: #F8FAFC;
+    --text-muted: #CBD5E1;
+    --card-bg: #1E293B;
+    --card-border: rgba(66, 149, 220, 0.35);
   }
 
   body {

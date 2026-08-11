@@ -6,7 +6,7 @@ import { Phone, Mail, MapPin, Facebook, Linkedin, Instagram, MessageCircle } fro
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 dark:bg-[#181818] text-slate-400 text-xs py-16 border-t border-slate-800 dark:border-neutral-800 transition-colors duration-300">
+    <footer className="bg-slate-900 dark:bg-[#0B132B] text-slate-300 text-xs py-16 border-t border-slate-800 dark:border-slate-700/60 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Footer Columns */}
@@ -67,8 +67,8 @@ export default function Footer() {
           {/* Column 5: Contacto Directo */}
           <div className="space-y-3">
             <h4 className="text-white font-bold uppercase tracking-wider text-xs font-['Raleway']">Contacto</h4>
-            <div className="space-y-2 text-[#B0B1B0]">
-              <div className="flex items-[#B0B1B0] gap-2">
+            <div className="space-y-2 text-slate-300">
+              <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-[#4295DC] shrink-0" />
                 <span>Santa Cruz - Bolivia (Calle Barron #435)</span>
               </div>
@@ -102,7 +102,7 @@ export default function Footer() {
         </div>
 
         {/* Footer Bottom Line */}
-        <div className="pt-8 border-t border-slate-800 dark:border-neutral-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-400">
+        <div className="pt-8 border-t border-slate-800 dark:border-slate-700/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-400">
           <p>© {new Date().getFullYear()} EMPROTEC. Todos los derechos reservados. Santa Cruz, Bolivia.</p>
           <div className="flex space-x-4">
             <Link href="#inicio" className="hover:text-[#4295DC] transition-colors">Términos de servicio</Link>

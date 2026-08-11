@@ -63,12 +63,12 @@ export default function StickyTimelineSection() {
   const IconActive = activeStage.icon;
 
   return (
-    <section id="metodologia" className="py-24 bg-white dark:bg-[#181818] text-slate-900 dark:text-white relative overflow-hidden transition-colors duration-300">
+    <section id="metodologia" className="py-24 bg-white dark:bg-[#0F172A] text-slate-900 dark:text-white relative overflow-hidden transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-widest text-[#4295DC] bg-slate-100 dark:bg-[#1F1F1F] px-4 py-1.5 rounded-full border border-slate-200 dark:border-neutral-800">
+          <span className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-widest text-[#4295DC] bg-slate-100 dark:bg-slate-800 px-4 py-1.5 rounded-full border border-slate-200 dark:border-slate-700/60">
             <Sparkles className="w-3.5 h-3.5" /> SECCIÓN 06 — METODOLOGÍA PROBADA
           </span>
 
@@ -101,12 +101,12 @@ export default function StickyTimelineSection() {
                   className={`p-4 rounded-2xl text-left transition-all duration-300 border flex flex-col justify-between ${
                     isCurrent
                       ? "bg-[#0E315B] dark:bg-[#4295DC] text-white border-[#0E315B] dark:border-[#4295DC] shadow-xl scale-105"
-                      : "bg-slate-50 dark:bg-[#1F1F1F] text-slate-700 dark:text-slate-200 border-slate-200/80 dark:border-neutral-800 hover:bg-slate-100 dark:hover:bg-neutral-800"
+                      : "bg-slate-50 dark:bg-[#1E293B] text-slate-700 dark:text-slate-200 border-slate-200/80 dark:border-slate-700/60 hover:bg-slate-100 dark:hover:bg-slate-700/60"
                   }`}
                 >
                   <span
                     className={`text-xs font-black font-['Raleway'] px-2 py-0.5 rounded w-max mb-2 ${
-                      isCurrent ? "bg-[#4295DC] dark:bg-[#181818] text-white" : "bg-slate-200 dark:bg-neutral-800 text-slate-700 dark:text-slate-200"
+                      isCurrent ? "bg-[#4295DC] dark:bg-slate-900 text-white" : "bg-slate-200 dark:bg-slate-700/60 text-slate-700 dark:text-slate-200"
                     }`}
                   >
                     {stg.num}
@@ -126,7 +126,7 @@ export default function StickyTimelineSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
-          className="bg-slate-50 dark:bg-[#1F1F1F] rounded-3xl p-8 sm:p-12 shadow-2xl border border-slate-200/80 dark:border-neutral-800"
+          className="bg-slate-50 dark:bg-[#1E293B] rounded-3xl p-8 sm:p-12 shadow-2xl border border-slate-200/80 dark:border-slate-700/60"
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             
@@ -162,7 +162,7 @@ export default function StickyTimelineSection() {
 
             {/* Right Visual Image */}
             <div className="lg:col-span-6">
-              <div className="relative w-full aspect-16/10 rounded-2xl overflow-hidden shadow-xl border border-slate-200 dark:border-neutral-800">
+              <div className="relative w-full aspect-16/10 rounded-2xl overflow-hidden shadow-xl border border-slate-200 dark:border-slate-700/60">
                 <Image
                   src={activeStage.image}
                   alt={activeStage.title}

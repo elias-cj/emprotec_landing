@@ -148,7 +148,11 @@ export const EMPROTEC_12_ITEMS: CatalogItem[] = [
   },
 ];
 
-export default function ServicesAndProductsGrid() {
+interface ServicesAndProductsGridProps {
+  onAddToCart?: (product: Product) => void;
+}
+
+export default function ServicesAndProductsGrid({ onAddToCart }: ServicesAndProductsGridProps = {}) {
   const [filter, setFilter] = useState<'todos' | 'producto' | 'servicio'>('todos');
 
   const filteredItems = EMPROTEC_12_ITEMS.filter((item) => {
@@ -157,12 +161,12 @@ export default function ServicesAndProductsGrid() {
   });
 
   return (
-    <section id="servicios-y-productos" className="py-24 bg-white dark:bg-[#181818] text-slate-900 dark:text-white relative overflow-hidden transition-colors duration-300 border-t border-slate-200 dark:border-neutral-800">
+    <section id="servicios-y-productos" className="py-24 bg-white dark:bg-[#0F172A] text-slate-900 dark:text-white relative overflow-hidden transition-colors duration-300 border-t border-slate-200 dark:border-slate-700/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-10">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-[#4295DC] bg-slate-100 dark:bg-[#1F1F1F] px-4 py-1.5 rounded-full border border-slate-200 dark:border-neutral-800 shadow-sm">
+          <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-[#4295DC] bg-slate-100 dark:bg-slate-800 px-4 py-1.5 rounded-full border border-slate-200 dark:border-slate-700/60 shadow-sm">
             <Sparkles className="w-3.5 h-3.5" /> CATÁLOGO OFICIAL EMPROTEC
           </span>
 
@@ -182,7 +186,7 @@ export default function ServicesAndProductsGrid() {
             className={`px-5 py-2 rounded-full text-xs font-black uppercase tracking-wider transition-all duration-300 ${
               filter === 'todos'
                 ? 'bg-[#0E315B] dark:bg-[#4295DC] text-white shadow-lg scale-105'
-                : 'bg-slate-100 dark:bg-[#1F1F1F] text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-neutral-800 hover:bg-slate-200 dark:hover:bg-neutral-800'
+                : 'bg-slate-100 dark:bg-[#1E293B] text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700/60 hover:bg-slate-200 dark:hover:bg-slate-700'
             }`}
           >
             Todos ({EMPROTEC_12_ITEMS.length})
@@ -193,7 +197,7 @@ export default function ServicesAndProductsGrid() {
             className={`px-5 py-2 rounded-full text-xs font-black uppercase tracking-wider transition-all duration-300 ${
               filter === 'producto'
                 ? 'bg-[#0E315B] dark:bg-[#4295DC] text-white shadow-lg scale-105'
-                : 'bg-slate-100 dark:bg-[#1F1F1F] text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-neutral-800 hover:bg-slate-200 dark:hover:bg-neutral-800'
+                : 'bg-slate-100 dark:bg-[#1E293B] text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700/60 hover:bg-slate-200 dark:hover:bg-slate-700'
             }`}
           >
             Productos ({EMPROTEC_12_ITEMS.filter((i) => i.itemType === 'producto').length})
@@ -204,7 +208,7 @@ export default function ServicesAndProductsGrid() {
             className={`px-5 py-2 rounded-full text-xs font-black uppercase tracking-wider transition-all duration-300 ${
               filter === 'servicio'
                 ? 'bg-[#0E315B] dark:bg-[#4295DC] text-white shadow-lg scale-105'
-                : 'bg-slate-100 dark:bg-[#1F1F1F] text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-neutral-800 hover:bg-slate-200 dark:hover:bg-neutral-800'
+                : 'bg-slate-100 dark:bg-[#1E293B] text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700/60 hover:bg-slate-200 dark:hover:bg-slate-700'
             }`}
           >
             Servicios ({EMPROTEC_12_ITEMS.filter((i) => i.itemType === 'servicio').length})
@@ -230,7 +234,7 @@ export default function ServicesAndProductsGrid() {
                 >
                   <div>
                     {/* Square Image Container */}
-                    <div className="relative w-full aspect-square overflow-hidden rounded-xl bg-slate-100 dark:bg-[#1F1F1F] border border-slate-200/80 dark:border-neutral-800 mb-3 shadow-md">
+                    <div className="relative w-full aspect-square overflow-hidden rounded-xl bg-slate-100 dark:bg-[#1E293B] border border-slate-200/80 dark:border-slate-700/60 mb-3 shadow-md">
                       <Image
                         src={item.image!}
                         alt={item.name}

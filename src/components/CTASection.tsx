@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function CTASection() {
   return (
-    <section id="contacto" className="py-24 bg-gradient-to-b from-[#F0F5FA] via-[#E2EDF8] to-[#F0F5FA] dark:from-[#191715] dark:via-[#0E315B] dark:to-[#191715] relative text-[#0E315B] dark:text-white text-center overflow-hidden transition-colors duration-300">
+    <section id="contacto" className="py-24 bg-gradient-to-b from-[#F0F5FA] via-[#E2EDF8] to-[#F0F5FA] dark:from-[#0F172A] dark:via-[#162238] dark:to-[#0F172A] relative text-[#0E315B] dark:text-white text-center overflow-hidden transition-colors duration-300">
       {/* Background radial cyan/navy glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[300px] bg-gradient-to-r from-[#4295DC]/25 via-[#0E315B]/40 to-[#4295DC]/25 blur-[140px] pointer-events-none" />
 
@@ -21,7 +21,7 @@ export default function CTASection() {
           <span className="text-[#4295DC]">hogar o empresa</span>?
         </motion.h2>
 
-        <p className="text-[#5A6B80] dark:text-[#B0B1B0] text-sm sm:text-base max-w-2xl mx-auto font-light">
+        <p className="text-[#5A6B80] dark:text-slate-300 text-sm sm:text-base max-w-2xl mx-auto font-light">
           Contáctanos hoy mismo para asesoramiento personalizado y cotización de proyectos de ingeniería, redes y seguridad.
         </p>
 

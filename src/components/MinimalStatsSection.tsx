@@ -52,12 +52,12 @@ export default function MinimalStatsSection() {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section ref={ref} className="py-14 sm:py-16 bg-white dark:bg-[#181818] text-slate-900 dark:text-white border-y border-slate-200/80 dark:border-neutral-800 transition-colors duration-300">
+    <section ref={ref} className="py-14 sm:py-16 bg-white dark:bg-[#0F172A] text-slate-900 dark:text-white border-y border-slate-200/80 dark:border-slate-700/60 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Tag Header */}
         <div className="mb-10 text-center">
-          <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-[#4295DC] bg-slate-100 dark:bg-[#1F1F1F] px-4 py-1.5 rounded-full border border-slate-200 dark:border-neutral-800">
+          <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-[#4295DC] bg-slate-100 dark:bg-slate-800 px-4 py-1.5 rounded-full border border-slate-200 dark:border-slate-700/60">
             <Sparkles className="w-3.5 h-3.5" /> SECCIÓN 04 — CIFRAS QUE RESPALDAN NUESTRO TRABAJO
           </span>
         </div>
@@ -83,7 +83,7 @@ export default function MinimalStatsSection() {
               </h3>
 
               {/* Short Description */}
-              <p className="text-[11px] text-slate-500 dark:text-slate-400 font-light max-w-xs mx-auto leading-relaxed">
+              <p className="text-[11px] text-slate-500 dark:text-slate-300 font-light max-w-xs mx-auto leading-relaxed">
                 {stat.desc}
               </p>
             </motion.div>

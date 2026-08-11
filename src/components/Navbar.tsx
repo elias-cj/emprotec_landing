@@ -26,7 +26,7 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }: Navb
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-[#0E315B]/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 py-3.5 transition-colors duration-300 shadow-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-[#0F172A]/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-700/60 py-3.5 transition-colors duration-300 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         
         {/* Logo Branding */}
@@ -160,9 +160,8 @@ export default function Navbar({ cartCount = 0, onOpenCart, onOpenSearch }: Navb
         </div>
       </div>
 
-      {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white dark:bg-[#0E315B] border-b border-slate-200 dark:border-slate-800 px-6 pt-4 pb-6 space-y-4">
+        <div className="lg:hidden bg-white dark:bg-[#0F172A] border-b border-slate-200 dark:border-slate-700/60 px-6 pt-4 pb-6 space-y-4">
           <nav className="flex flex-col space-y-3">
             {navLinks.map((link) => (
               <Link

@@ -61,17 +61,17 @@ export default function CartDrawer({
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed top-0 right-0 z-50 h-full w-full max-w-md bg-white dark:bg-[#0E315B] border-l border-[#4295DC]/30 shadow-2xl flex flex-col justify-between"
+            className="fixed top-0 right-0 z-50 h-full w-full max-w-md bg-white dark:bg-[#1E293B] border-l border-[#4295DC]/30 shadow-2xl flex flex-col justify-between"
           >
             {/* Header */}
-            <div className="p-6 border-b border-[#4295DC]/20 flex items-center justify-between bg-gray-50 dark:bg-[#081e38]">
+            <div className="p-6 border-b border-[#4295DC]/20 flex items-center justify-between bg-gray-50 dark:bg-[#162238]">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-xl bg-[#4295DC]/20 border border-[#4295DC]/40 flex items-center justify-center">
                   <ShoppingCart className="w-5 h-5 text-[#4295DC]" />
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-[#0E315B] dark:text-white font-['Raleway']">Tu Cotización / Carrito</h3>
-                  <span className="text-xs text-[#58697d] dark:text-[#B0B1B0]">{items.length} productos seleccionados</span>
+                  <span className="text-xs text-[#58697d] dark:text-slate-300">{items.length} productos seleccionados</span>
                 </div>
               </div>
               <button
@@ -88,7 +88,7 @@ export default function CartDrawer({
                 <div className="h-full flex flex-col items-center justify-center text-center text-gray-400 py-12">
                   <ShoppingCart className="w-16 h-16 text-[#4295DC]/40 mb-4 animate-bounce" />
                   <p className="text-lg font-bold text-[#0E315B] dark:text-white mb-1 font-['Raleway']">Tu carrito está vacío</p>
-                  <p className="text-xs text-[#58697d] dark:text-[#B0B1B0] max-w-xs">
+                  <p className="text-xs text-[#58697d] dark:text-slate-300 max-w-xs">
                     Explora nuestra tienda e incluye equipamiento informático o servicios para generar tu cotización instantánea.
                   </p>
                 </div>
@@ -141,9 +141,9 @@ export default function CartDrawer({
 
             {/* Footer Summary & WhatsApp CTA */}
             {items.length > 0 && (
-              <div className="p-6 border-t border-[#4295DC]/20 bg-gray-50 dark:bg-[#081e38] space-y-4">
+              <div className="p-6 border-t border-[#4295DC]/20 bg-gray-50 dark:bg-[#162238] space-y-4">
                 <div className="space-y-1">
-                  <div className="flex items-center justify-between text-sm text-[#58697d] dark:text-[#B0B1B0]">
+                  <div className="flex items-center justify-between text-sm text-[#58697d] dark:text-slate-300">
                     <span>Subtotal Estimado:</span>
                     <span className="font-semibold text-[#0E315B] dark:text-white">${totalUsd.toFixed(2)} USD</span>
                   </div>

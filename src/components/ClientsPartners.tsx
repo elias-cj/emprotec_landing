@@ -34,7 +34,7 @@ export default function ClientsPartners() {
   ];
 
   return (
-    <section id="clientes" className="py-20 bg-white dark:bg-[#191715] text-slate-900 dark:text-white relative overflow-hidden transition-colors duration-300">
+    <section id="clientes" className="py-20 bg-white dark:bg-[#0F172A] text-slate-900 dark:text-white relative overflow-hidden transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 relative z-10">
 
         {/* Section 1: Catálogo de Productos y Equipamiento */}
@@ -49,7 +49,7 @@ export default function ClientsPartners() {
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0E315B] dark:text-white">
               Catálogo de <span className="text-[#4295DC]">Productos y Equipamiento</span>
             </h2>
-            <p className="text-slate-600 dark:text-[#B0B1B0] text-sm sm:text-base max-w-2xl mx-auto font-light">
+            <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base max-w-2xl mx-auto font-light">
               Provisión e instalación especializada con garantía oficial e ingeniería a medida.
             </p>
           </motion.div>
@@ -71,13 +71,13 @@ export default function ClientsPartners() {
                     type: "spring",
                     stiffness: 110,
                   }}
-                  className="p-6 rounded-2xl bg-slate-50 dark:bg-[#0E315B]/70 border border-slate-200/80 dark:border-[#4295DC]/30 shadow-md hover:shadow-xl transition-colors duration-300 text-left space-y-3 cursor-pointer"
+                  className="p-6 rounded-2xl bg-slate-50 dark:bg-[#1E293B] border border-slate-200/80 dark:border-slate-700/60 shadow-md hover:shadow-xl transition-colors duration-300 text-left space-y-3 cursor-pointer"
                 >
                   <div className="w-10 h-10 rounded-xl bg-[#4295DC]/15 flex items-center justify-center text-[#4295DC]">
                     <Icon className="w-5 h-5" />
                   </div>
                   <h3 className="text-base font-bold text-[#0E315B] dark:text-white">{cat.title}</h3>
-                  <p className="text-xs text-slate-600 dark:text-[#B0B1B0] leading-relaxed">{cat.desc}</p>
+                  <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">{cat.desc}</p>
                 </motion.div>
               );
             })}
@@ -90,7 +90,7 @@ export default function ClientsPartners() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
           transition={{ duration: 0.5 }}
-          className="space-y-8 text-center pt-8 border-t border-slate-200 dark:border-slate-800"
+          className="space-y-8 text-center pt-8 border-t border-slate-200 dark:border-slate-700/60"
         >
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0E315B] dark:text-white">
             Marcas & <span className="text-[#4295DC]">Partners Tecnológicos</span>

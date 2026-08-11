@@ -26,7 +26,7 @@ export default function ProcessSection() {
   ];
 
   return (
-    <section className="py-24 relative overflow-hidden bg-white dark:bg-[#0E315B] tech-grid-bg transition-colors duration-400">
+    <section className="py-24 relative overflow-hidden bg-white dark:bg-[#0F172A] tech-grid-bg transition-colors duration-400">
       <div className="glow-orb-blue bottom-10 left-10 opacity-30" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -37,7 +37,7 @@ export default function ProcessSection() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0E315B] dark:text-white mt-4 mb-6 font-['Raleway']">
             Cómo Transformamos Tu Empresa
           </h2>
-          <p className="text-[#58697d] dark:text-[#B0B1B0] text-lg font-light leading-relaxed">
+          <p className="text-[#58697d] dark:text-slate-300 text-lg font-light leading-relaxed">
             Un proceso claro, estructurado y transparente para garantizar resultados óptimos desde el diagnóstico inicial hasta el soporte a largo plazo.
           </p>
         </div>

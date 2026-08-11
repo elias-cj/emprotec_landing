@@ -83,7 +83,7 @@ export default function ProjectsShowcase() {
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
 
   return (
-    <section id="proyectos" className="py-24 bg-slate-50 dark:bg-[#081e38] relative transition-colors duration-300">
+    <section id="proyectos" className="py-24 bg-slate-50 dark:bg-[#0F172A] relative transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
@@ -96,7 +96,7 @@ export default function ProjectsShowcase() {
             Nuestros <span className="text-[#4295DC]">proyectos realizados</span>
           </h2>
 
-          <p className="text-[#58697d] dark:text-[#B0B1B0] text-sm sm:text-base font-light leading-relaxed">
+          <p className="text-[#58697d] dark:text-slate-300 text-sm sm:text-base font-light leading-relaxed">
             Conoce algunas de las implementaciones tecnológicas ejecutadas por nuestro equipo de ingenieros en Santa Cruz y Bolivia.
           </p>
         </div>
@@ -108,7 +108,7 @@ export default function ProjectsShowcase() {
               key={proj.id}
               whileHover={{ y: -6 }}
               transition={{ duration: 0.3 }}
-              className="bg-white dark:bg-[#0E315B] rounded-3xl overflow-hidden shadow-xl border border-slate-200 dark:border-[#4295DC]/30 flex flex-col justify-between group"
+              className="bg-white dark:bg-[#1E293B] rounded-3xl overflow-hidden shadow-xl border border-slate-200 dark:border-slate-700/60 flex flex-col justify-between group"
             >
               <div>
                 {/* Project Image */}
@@ -137,7 +137,7 @@ export default function ProjectsShowcase() {
                     {proj.title}
                   </h3>
 
-                  <p className="text-slate-600 dark:text-[#B0B1B0] text-xs font-light leading-relaxed line-clamp-3">
+                  <p className="text-slate-600 dark:text-slate-300 text-xs font-light leading-relaxed line-clamp-3">
                     {proj.desc}
                   </p>
                 </div>
@@ -167,7 +167,7 @@ export default function ProjectsShowcase() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
-              className="relative w-full max-w-2xl bg-white dark:bg-[#0E315B] rounded-3xl p-6 sm:p-8 shadow-2xl border border-[#4295DC]/30 text-[#0E315B] dark:text-white"
+              className="relative w-full max-w-2xl bg-white dark:bg-[#1E293B] rounded-3xl p-6 sm:p-8 shadow-2xl border border-[#4295DC]/30 text-[#0E315B] dark:text-white"
             >
               <button
                 onClick={() => setSelectedProject(null)}
@@ -197,7 +197,7 @@ export default function ProjectsShowcase() {
                   </p>
                 </div>
 
-                <div className="bg-slate-50 dark:bg-[#081e38] p-4 rounded-2xl border border-slate-200/60 dark:border-slate-800 space-y-2">
+                <div className="bg-slate-50 dark:bg-[#162238] p-4 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 space-y-2">
                   <h4 className="text-xs font-bold uppercase text-[#4295DC] flex items-center gap-1.5">
                     <ShieldCheck className="w-4 h-4" /> Resultados del Proyecto
                   </h4>

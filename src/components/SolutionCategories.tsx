@@ -176,7 +176,7 @@ export default function SolutionCategories() {
   });
 
   return (
-    <section id="categorias" className="py-20 bg-slate-50 dark:bg-[#081e38] relative transition-colors duration-300">
+    <section id="categorias" className="py-20 bg-slate-50 dark:bg-[#0F172A] relative transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
@@ -189,7 +189,7 @@ export default function SolutionCategories() {
             Explora nuestras <span className="text-[#4295DC]">soluciones</span>
           </h2>
 
-          <p className="text-slate-600 dark:text-[#B0B1B0] text-sm sm:text-base font-light leading-relaxed">
+          <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base font-light leading-relaxed">
             Descubre nuestra gama de productos tecnológicos de alta resistencia y servicios profesionales de ingeniería.
           </p>
         </div>
@@ -201,7 +201,7 @@ export default function SolutionCategories() {
             className={`px-5 py-2 rounded-full text-xs font-bold transition-all ${
               activeTab === "todos"
                 ? "bg-[#4295DC] text-white shadow-md shadow-cyan-500/20"
-                : "bg-white dark:bg-[#0E315B] text-[#0E315B] dark:text-slate-300 border border-slate-200 dark:border-slate-700"
+                : "bg-white dark:bg-[#1E293B] text-[#0E315B] dark:text-slate-300 border border-slate-200 dark:border-slate-700/60"
             }`}
           >
             Todas las soluciones
@@ -211,7 +211,7 @@ export default function SolutionCategories() {
             className={`px-5 py-2 rounded-full text-xs font-bold transition-all ${
               activeTab === "producto"
                 ? "bg-[#4295DC] text-white shadow-md shadow-cyan-500/20"
-                : "bg-white dark:bg-[#0E315B] text-[#0E315B] dark:text-slate-300 border border-slate-200 dark:border-slate-700"
+                : "bg-white dark:bg-[#1E293B] text-[#0E315B] dark:text-slate-300 border border-slate-200 dark:border-slate-700/60"
             }`}
           >
             Categorías de Productos
@@ -221,7 +221,7 @@ export default function SolutionCategories() {
             className={`px-5 py-2 rounded-full text-xs font-bold transition-all ${
               activeTab === "servicio"
                 ? "bg-[#4295DC] text-white shadow-md shadow-cyan-500/20"
-                : "bg-white dark:bg-[#0E315B] text-[#0E315B] dark:text-slate-300 border border-slate-200 dark:border-slate-700"
+                : "bg-white dark:bg-[#1E293B] text-[#0E315B] dark:text-slate-300 border border-slate-200 dark:border-slate-700/60"
             }`}
           >
             Categorías de Servicios
@@ -242,7 +242,7 @@ export default function SolutionCategories() {
                   exit={{ opacity: 0, scale: 0.95 }}
                   whileHover={{ y: -6 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-white dark:bg-[#0E315B] rounded-3xl p-6 shadow-xl border border-slate-200 dark:border-[#4295DC]/30 flex flex-col justify-between group transition-all duration-300 hover:border-[#4295DC]"
+                  className="bg-white dark:bg-[#1E293B] rounded-3xl p-6 shadow-xl border border-slate-200 dark:border-slate-700/60 flex flex-col justify-between group transition-all duration-300 hover:border-[#4295DC]"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-4">
@@ -265,7 +265,7 @@ export default function SolutionCategories() {
                       {item.name}
                     </h3>
 
-                    <p className="text-slate-600 dark:text-[#B0B1B0] text-xs font-light leading-relaxed mb-4 line-clamp-2">
+                    <p className="text-slate-600 dark:text-slate-300 text-xs font-light leading-relaxed mb-4 line-clamp-2">
                       {item.desc}
                     </p>
                   </div>

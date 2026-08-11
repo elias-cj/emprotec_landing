@@ -23,7 +23,7 @@ export default function AboutUsSection() {
   ];
 
   return (
-    <section id="nosotros" className="py-24 bg-white dark:bg-[#0E315B] relative overflow-hidden transition-colors duration-300">
+    <section id="nosotros" className="py-24 bg-white dark:bg-[#0F172A] relative overflow-hidden transition-colors duration-300">
       {/* Background glow */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-[#4295DC]/10 rounded-full blur-[140px] pointer-events-none" />
 
@@ -63,7 +63,7 @@ export default function AboutUsSection() {
               Tecnología que impulsa tus <span className="text-[#4295DC]">proyectos</span>
             </h2>
 
-            <p className="text-slate-600 dark:text-[#B0B1B0] text-sm sm:text-base font-light leading-relaxed">
+            <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base font-light leading-relaxed">
               En EMPROTEC nos especializamos en la venta, provisión, ingeniería e instalación de soluciones tecnológicas integrales para hogares y empresas en Santa Cruz y toda Bolivia.
             </p>
 
@@ -90,12 +90,12 @@ export default function AboutUsSection() {
         </div>
 
         {/* Counter Metrics Cards */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-6 border-t border-slate-100 dark:border-slate-800">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-6 border-t border-slate-100 dark:border-slate-700/60">
           {metrics.map((item, idx) => (
             <motion.div
               key={idx}
               whileHover={{ y: -4 }}
-              className="p-6 rounded-3xl bg-slate-50 dark:bg-[#081e38] border border-slate-200/80 dark:border-slate-800 text-center space-y-1"
+              className="p-6 rounded-3xl bg-slate-50 dark:bg-[#1E293B] border border-slate-200/80 dark:border-slate-700/60 text-center space-y-1"
             >
               <span className="text-3xl sm:text-4xl font-black text-[#4295DC] font-['Raleway'] block">
                 {item.value}
