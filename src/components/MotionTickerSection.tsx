@@ -1,20 +1,9 @@
 "use client";
 
-import { useRef } from "react";
 import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
 import { Server, Network, ShieldCheck, Lightbulb } from "lucide-react";
 
 export default function MotionTickerSection() {
-  const targetRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-    offset: ["start end", "end start"],
-  });
-
-  const xPos = useTransform(scrollYProgress, [0, 1], ["15%", "-40%"]);
-  const scaleVal = useTransform(scrollYProgress, [0.1, 0.5, 0.9], [0.96, 1, 0.98]);
-
   const items = [
     {
       word: "INFRAESTRUCTURA",
@@ -42,57 +31,64 @@ export default function MotionTickerSection() {
     },
   ];
 
+  // Repeat items 4 times to ensure seamless infinite looping on all screen sizes
+  const repeatedItems = [...items, ...items, ...items, ...items];
+
   return (
     <section
       id="seccion-movimiento"
-      ref={targetRef}
-      className="py-14 sm:py-16 bg-slate-900 text-white overflow-hidden relative transition-colors duration-300"
+      className="py-5 sm:py-7 bg-slate-900 text-white overflow-hidden relative border-y border-slate-800/80 select-none"
     >
-      {/* Editorial Header Tag */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-5 text-left">
-        <span className="text-[11px] font-black uppercase tracking-widest text-[#4295DC]">
-          SECCIÓN 01 — EMPROTEC EN MOVIMIENTO
-        </span>
-      </div>
+      {/* Edge Blur / Gradient Overlays for Seamless Fade */}
+      <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-20 sm:w-40 bg-gradient-to-r from-slate-900 via-slate-900/90 to-transparent z-10" />
+      <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-20 sm:w-40 bg-gradient-to-l from-slate-900 via-slate-900/90 to-transparent z-10" />
 
-      {/* Horizontal Moving Canvas */}
-      <motion.div style={{ scale: scaleVal }} className="relative">
-        <motion.div style={{ x: xPos }} className="flex items-center gap-6 sm:gap-10 whitespace-nowrap pl-4 sm:pl-8">
-          {items.map((item, idx) => {
+
+
+      {/* Infinite Slider Track (Moves left smoothly, pauses on hover) */}
+      <div className="relative w-full overflow-hidden group">
+        <div className="flex w-max items-center animate-ticker group-hover:[animation-play-state:paused]">
+          {repeatedItems.map((item, idx) => {
             const IconComp = item.icon;
             return (
-              <div key={idx} className="flex items-center gap-5 sm:gap-6 shrink-0 group">
-                
-                {/* Compact Font for Seamless Display */}
-                <div className="space-y-0.5">
-                  <span className="text-2xl sm:text-4xl lg:text-5xl font-black font-['Raleway'] tracking-tight text-white/90 group-hover:text-[#4295DC] transition-colors duration-300">
+              <div
+                key={idx}
+                className="flex items-center gap-6 sm:gap-8 shrink-0 px-4 sm:px-6 py-2 group/card cursor-pointer transition-transform duration-300 hover:scale-[1.02]"
+              >
+                {/* Text Block */}
+                <div className="space-y-1">
+                  <span className="text-2xl sm:text-4xl lg:text-5xl font-black font-['Raleway'] tracking-tight text-white/90 group-hover/card:text-[#4295DC] transition-colors duration-300">
                     {item.word}
                   </span>
-                  <div className="flex items-center gap-1.5 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-slate-400 pl-0.5">
-                    <IconComp className="w-3.5 h-3.5 text-[#4295DC]" />
+                  <div className="flex items-center gap-2 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-slate-400 pl-0.5">
+                    <div className="p-1 rounded-md bg-slate-800/80 border border-slate-700/60 text-[#4295DC] group-hover/card:bg-[#4295DC] group-hover/card:text-white transition-colors duration-300">
+                      <IconComp className="w-3.5 h-3.5" />
+                    </div>
                     <span>{item.sub}</span>
                   </div>
                 </div>
 
-                {/* Compact Tech Visual Element */}
-                <div className="relative w-28 sm:w-36 h-16 sm:h-22 rounded-xl overflow-hidden shadow-lg border border-slate-700/80 group-hover:scale-105 transition-transform duration-300">
+                {/* Card Visual Image */}
+                <div className="relative w-28 sm:w-40 h-16 sm:h-24 rounded-xl overflow-hidden shadow-xl border border-slate-700/80 group-hover/card:border-[#4295DC]/60 group-hover/card:shadow-[#4295DC]/20 transition-all duration-300">
                   <Image
                     src={item.img}
                     alt={item.word}
                     fill
-                    className="object-cover object-center brightness-90 group-hover:brightness-100 transition-all duration-300"
+                    className="object-cover object-center brightness-90 group-hover/card:brightness-105 group-hover/card:scale-110 transition-all duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-80 group-hover/card:opacity-40 transition-opacity duration-300" />
                 </div>
 
                 {/* Separator Symbol */}
-                <span className="text-xl text-[#4295DC]/40 font-black">•</span>
-
+                <div className="flex items-center justify-center pl-2">
+                  <span className="w-2 h-2 rounded-full bg-[#4295DC]/40 group-hover/card:bg-[#4295DC] group-hover/card:scale-125 transition-all duration-300" />
+                </div>
               </div>
             );
           })}
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </section>
   );
 }
+

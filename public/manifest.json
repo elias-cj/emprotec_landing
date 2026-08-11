@@ -1,0 +1,21 @@
+{
+  "name": "EMPROTEC — Soluciones Tecnológicas e Ingeniería",
+  "short_name": "EMPROTEC",
+  "description": "Proveemos e instalamos equipamiento de alta calidad en redes, ciberseguridad, UPS, servidores y domótica en Santa Cruz, Bolivia.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0E315B",
+  "theme_color": "#4295DC",
+  "icons": [
+    {
+      "src": "/assets/logo/logo_emprotec.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/logo/logo_emprotec.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
