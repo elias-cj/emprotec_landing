@@ -1,3 +1,5 @@
+export const dynamic = "force-static";
+
 import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
@@ -12,3 +14,4 @@ export default function robots(): MetadataRoute.Robots {
     sitemap: "https://emprotec.com.bo/sitemap.xml",
   };
 }
+

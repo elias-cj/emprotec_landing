@@ -148,7 +148,11 @@ export const EMPROTEC_12_ITEMS: CatalogItem[] = [
   },
 ];
 
-export default function ServicesAndProductsGrid() {
+export interface ServicesAndProductsGridProps {
+  onAddToCart?: (product: Product) => void;
+}
+
+export default function ServicesAndProductsGrid({ onAddToCart }: ServicesAndProductsGridProps = {}) {
   const [filter, setFilter] = useState<'todos' | 'producto' | 'servicio'>('todos');
 
   const filteredItems = EMPROTEC_12_ITEMS.filter((item) => {
