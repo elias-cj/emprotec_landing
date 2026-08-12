@@ -57,7 +57,7 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-white dark:bg-[#181818] text-slate-900 dark:text-white selection:bg-[#4295DC] selection:text-white font-sans antialiased overflow-x-hidden transition-colors duration-300">
+    <main className="min-h-screen bg-white dark:bg-[#0F172A] text-slate-900 dark:text-white selection:bg-[#4295DC] selection:text-white font-sans antialiased overflow-x-hidden transition-colors duration-300">
       {/* 1. Header Sticky Minimalista */}
       <Header />
 

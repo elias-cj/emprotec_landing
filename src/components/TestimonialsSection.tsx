@@ -47,7 +47,7 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section className="py-24 relative overflow-hidden bg-white dark:bg-[#0E315B] tech-grid-bg transition-colors duration-400">
+    <section className="py-24 relative overflow-hidden bg-white dark:bg-[#0F172A] tech-grid-bg transition-colors duration-400">
       <div className="glow-orb-blue top-1/2 right-1/4 opacity-30" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -58,7 +58,7 @@ export default function TestimonialsSection() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0E315B] dark:text-white mt-4 mb-4 font-['Raleway']">
             La Confianza de Nuestros Clientes
           </h2>
-          <p className="text-[#58697d] dark:text-[#B0B1B0] text-sm font-light">
+          <p className="text-[#58697d] dark:text-slate-300 text-sm font-light">
             Explora la retroalimentación de las organizaciones que impulsan su continuidad operativa con EMPROTEC.
           </p>
         </div>

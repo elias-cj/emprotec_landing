@@ -125,7 +125,7 @@ export default function InteractiveSolutionsExplorer() {
   const activeSol = SOLUTIONS_DATA[activeIdx];
 
   return (
-    <section id="soluciones" className="py-24 bg-[#F8FAFC] dark:bg-[#181818] text-slate-900 dark:text-white relative overflow-hidden transition-colors duration-300 border-b border-slate-200 dark:border-neutral-800">
+    <section id="soluciones" className="py-24 bg-[#F8FAFC] dark:bg-[#0F172A] text-slate-900 dark:text-white relative overflow-hidden transition-colors duration-300 border-b border-slate-200 dark:border-slate-700/60">
       
       {/* Background Glow */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#4295DC]/5 rounded-full blur-[140px] pointer-events-none" />
@@ -134,7 +134,7 @@ export default function InteractiveSolutionsExplorer() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <span className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-widest text-[#4295DC] bg-white dark:bg-[#1F1F1F] px-4 py-1.5 rounded-full border border-slate-200 dark:border-neutral-800 shadow-sm">
+          <span className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-widest text-[#4295DC] bg-white dark:bg-slate-800 px-4 py-1.5 rounded-full border border-slate-200 dark:border-slate-700/60 shadow-sm">
             <Sparkles className="w-3.5 h-3.5" /> SECCIÓN 02 — SOLUCIONES INTEGRALES
           </span>
 
@@ -164,7 +164,7 @@ export default function InteractiveSolutionsExplorer() {
                   className={`w-full p-4 rounded-2xl text-left transition-all duration-300 border flex items-center justify-between group ${
                     isSelected
                       ? "bg-[#0E315B] dark:bg-[#4295DC] text-white border-[#0E315B] dark:border-[#4295DC] shadow-xl translate-x-2"
-                      : "bg-white dark:bg-[#1F1F1F] text-slate-700 dark:text-slate-200 border-slate-200/80 dark:border-neutral-800 hover:bg-slate-100 dark:hover:bg-neutral-800"
+                      : "bg-white dark:bg-[#1E293B] text-slate-700 dark:text-slate-200 border-slate-200/80 dark:border-slate-700/60 hover:bg-slate-100 dark:hover:bg-slate-700/60"
                   }`}
                 >
                   <div className="flex items-center gap-3">
@@ -172,7 +172,7 @@ export default function InteractiveSolutionsExplorer() {
                       className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors ${
                         isSelected
                           ? "bg-[#4295DC] text-white"
-                          : "bg-slate-100 dark:bg-neutral-800 text-[#4295DC] group-hover:bg-[#4295DC] group-hover:text-white"
+                          : "bg-slate-100 dark:bg-slate-700/60 text-[#4295DC] group-hover:bg-[#4295DC] group-hover:text-white"
                       }`}
                     >
                       <IconComp className="w-5 h-5" />
@@ -205,10 +205,10 @@ export default function InteractiveSolutionsExplorer() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: -20, scale: 0.98 }}
                 transition={{ duration: 0.4 }}
-                className="bg-white dark:bg-[#1F1F1F] rounded-3xl p-6 sm:p-10 shadow-2xl border border-slate-200/80 dark:border-neutral-800 space-y-6"
+                className="bg-white dark:bg-[#1E293B] rounded-3xl p-6 sm:p-10 shadow-2xl border border-slate-200/80 dark:border-slate-700/60 space-y-6"
               >
                 {/* Visual Image Banner */}
-                <div className="relative w-full h-56 sm:h-72 rounded-2xl overflow-hidden shadow-lg bg-[#181818] border border-slate-200 dark:border-neutral-800">
+                <div className="relative w-full h-56 sm:h-72 rounded-2xl overflow-hidden shadow-lg bg-slate-800 border border-slate-200 dark:border-slate-700/60">
                   <Image
                     src={activeSol.image}
                     alt={activeSol.title}
@@ -216,7 +216,7 @@ export default function InteractiveSolutionsExplorer() {
                     className="object-cover object-center brightness-95"
                     priority
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#181818]/80 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/80 via-transparent to-transparent pointer-events-none" />
 
                   <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-white">
                     <span className="text-xs font-black uppercase tracking-widest bg-[#4295DC] px-3 py-1 rounded-md shadow">
@@ -237,7 +237,7 @@ export default function InteractiveSolutionsExplorer() {
                 </div>
 
                 {/* Bullet Points */}
-                <div className="space-y-2 pt-2 border-t border-slate-100 dark:border-neutral-800">
+                <div className="space-y-2 pt-2 border-t border-slate-100 dark:border-slate-700/60">
                   <span className="text-xs font-black uppercase text-[#0E315B] dark:text-[#4295DC] block mb-3">
                     Capacidades & Alcance Técnico
                   </span>

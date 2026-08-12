@@ -6,12 +6,12 @@ import { Quote, Sparkles, Star } from "lucide-react";
 
 export default function FeaturedTestimonialSection() {
   return (
-    <section className="py-24 bg-white dark:bg-[#181818] text-slate-900 dark:text-white relative overflow-hidden transition-colors duration-300 border-t border-slate-200 dark:border-neutral-800">
+    <section className="py-24 bg-white dark:bg-[#0F172A] text-slate-900 dark:text-white relative overflow-hidden transition-colors duration-300 border-t border-slate-200 dark:border-slate-700/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Tag Header */}
         <div className="text-center mb-12">
-          <span className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-widest text-[#4295DC] bg-slate-100 dark:bg-[#1F1F1F] px-4 py-1.5 rounded-full border border-slate-200 dark:border-neutral-800">
+          <span className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-widest text-[#4295DC] bg-slate-100 dark:bg-slate-800 px-4 py-1.5 rounded-full border border-slate-200 dark:border-slate-700/60">
             <Sparkles className="w-3.5 h-3.5" /> SECCIÓN 09 — EXPERIENCIA DE NUESTROS CLIENTES
           </span>
         </div>
@@ -22,7 +22,7 @@ export default function FeaturedTestimonialSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-[#181818] dark:bg-[#1F1F1F] text-white rounded-3xl overflow-hidden shadow-2xl border border-slate-800 dark:border-neutral-800 grid grid-cols-1 lg:grid-cols-12 items-center"
+          className="bg-[#1E293B] dark:bg-[#1E293B] text-white rounded-3xl overflow-hidden shadow-2xl border border-slate-700 dark:border-slate-700/60 grid grid-cols-1 lg:grid-cols-12 items-center"
         >
           {/* Left Large Client Portrait */}
           <div className="lg:col-span-5 relative h-[380px] lg:h-[500px]">
@@ -32,7 +32,7 @@ export default function FeaturedTestimonialSection() {
               fill
               className="object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#181818]/90 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-[#181818] pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#1E293B]/90 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-[#1E293B] pointer-events-none" />
           </div>
 
           {/* Right Quote & Details */}
@@ -51,7 +51,7 @@ export default function FeaturedTestimonialSection() {
               "EMPROTEC transformó la infraestructura de nuestro centro logístico en Santa Cruz. La migración a cableado de fibra y cámaras 4K fue impecable, sin detener nuestras operaciones en ningún momento."
             </blockquote>
 
-            <div className="pt-4 border-t border-slate-800 dark:border-neutral-800">
+            <div className="pt-4 border-t border-slate-700 dark:border-slate-700/60">
               <h4 className="text-lg font-black text-white font-['Raleway']">
                 Ing. Carlos Mendoza
               </h4>

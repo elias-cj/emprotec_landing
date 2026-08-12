@@ -26,7 +26,7 @@ export default function HeroSection() {
       id="inicio"
       style={{ scale: heroScale, opacity: heroOpacity }}
       onMouseMove={handleMouseMove}
-      className="relative min-h-screen pt-28 pb-16 flex flex-col justify-between bg-white dark:bg-[#181818] text-slate-900 dark:text-white overflow-hidden select-none transition-colors duration-300"
+      className="relative min-h-screen pt-28 pb-16 flex flex-col justify-between bg-white dark:bg-[#0F172A] text-slate-900 dark:text-white overflow-hidden select-none transition-colors duration-300"
     >
       {/* Background Subtle Gradient Blobs */}
       <div className="absolute top-1/4 -left-20 w-96 h-96 bg-[#4295DC]/10 rounded-full blur-[140px] pointer-events-none" />
@@ -43,7 +43,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-100 dark:bg-[#1F1F1F] border border-slate-200 dark:border-neutral-800 text-[#4295DC] text-[11px] font-bold uppercase tracking-wider"
+              className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700/60 text-[#4295DC] text-[11px] font-bold uppercase tracking-wider"
             >
               <Sparkles className="w-3.5 h-3.5" />
               <span>EMPROTEC — Soluciones TIC & Ingeniería</span>
@@ -89,7 +89,7 @@ export default function HeroSection() {
 
               <Link
                 href="#soluciones"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-xs font-extrabold text-[#0E315B] dark:text-white bg-slate-100 dark:bg-[#1F1F1F] hover:bg-slate-200 dark:hover:bg-neutral-800 transition-colors border border-slate-200 dark:border-neutral-800"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-xs font-extrabold text-[#0E315B] dark:text-white bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors border border-slate-200 dark:border-slate-700/60"
               >
                 <span>Explorar Soluciones</span>
               </Link>

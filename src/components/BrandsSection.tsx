@@ -22,7 +22,7 @@ const BRANDS_LIST: BrandItem[] = [
 
 export default function BrandsSection() {
   return (
-    <section className="py-16 bg-white dark:bg-[#0E315B] border-y border-slate-200 dark:border-slate-800 transition-colors duration-300">
+    <section className="py-16 bg-white dark:bg-[#0F172A] border-y border-slate-200 dark:border-slate-700/60 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -42,12 +42,12 @@ export default function BrandsSection() {
             <motion.div
               key={brand.id}
               whileHover={{ scale: 1.05, y: -2 }}
-              className="p-4 rounded-2xl bg-slate-50 dark:bg-[#081e38] border border-slate-200/80 dark:border-slate-800 flex flex-col items-center justify-center text-center cursor-pointer group transition-all duration-300"
+              className="p-4 rounded-2xl bg-slate-50 dark:bg-[#1E293B] border border-slate-200/80 dark:border-slate-700/60 flex flex-col items-center justify-center text-center cursor-pointer group transition-all duration-300"
             >
-              <span className="text-sm font-black text-slate-400 dark:text-slate-400 group-hover:text-[#4295DC] dark:group-hover:text-[#4295DC] font-['Raleway'] tracking-wider uppercase transition-colors">
+              <span className="text-sm font-black text-slate-400 dark:text-slate-200 group-hover:text-[#4295DC] dark:group-hover:text-[#4295DC] font-['Raleway'] tracking-wider uppercase transition-colors">
                 {brand.name}
               </span>
-              <span className="text-[9px] text-slate-400 dark:text-slate-500 font-medium block mt-1">
+              <span className="text-[9px] text-slate-400 dark:text-slate-300 font-medium block mt-1">
                 {brand.category}
               </span>
             </motion.div>

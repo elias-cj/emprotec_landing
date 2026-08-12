@@ -61,7 +61,7 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section id="servicios" className="py-24 relative overflow-hidden bg-white dark:bg-[#0E315B] tech-grid-bg transition-colors duration-400">
+    <section id="servicios" className="py-24 relative overflow-hidden bg-white dark:bg-[#0F172A] tech-grid-bg transition-colors duration-400">
       <div className="glow-orb-blue top-1/3 right-0 opacity-40" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -73,7 +73,7 @@ export default function ServicesSection() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0E315B] dark:text-white mt-4 mb-6 font-['Raleway']">
             Soluciones Integrales de Ingeniería TIC
           </h2>
-          <p className="text-[#58697d] dark:text-[#B0B1B0] text-lg font-light leading-relaxed">
+          <p className="text-[#58697d] dark:text-slate-300 text-lg font-light leading-relaxed">
             Explora nuestras soluciones. Pasa el cursor o haz clic en las tarjetas interactivas para descubrir los detalles técnicos de cada área.
           </p>
         </div>
@@ -149,7 +149,7 @@ export default function ServicesSection() {
                   </div>
 
                   {/* Back Side */}
-                  <div className="flip-card-back box-servicio-effect-card p-8 flex flex-col justify-between text-left bg-white dark:bg-[#081e38] border-[#4295DC]/50">
+                  <div className="flip-card-back box-servicio-effect-card p-8 flex flex-col justify-between text-left bg-white dark:bg-[#1E293B] border-[#4295DC]/50">
                     <div>
                       <div className="flex items-center justify-between mb-4">
                         <span className="text-xs font-extrabold text-[#4295DC] uppercase tracking-wider">

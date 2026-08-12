@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function SuccessCases() {
   return (
-    <section id="casos-de-exito" className="py-20 bg-gradient-to-b from-[#F8FAFC] via-white to-[#F8FAFC] dark:from-[#191715] dark:via-[#0E315B] dark:to-[#191715] relative text-[#0E315B] dark:text-white overflow-hidden transition-colors duration-300">
+    <section id="casos-de-exito" className="py-20 bg-gradient-to-b from-[#F8FAFC] via-white to-[#F8FAFC] dark:from-[#0F172A] dark:via-[#162238] dark:to-[#0F172A] relative text-[#0E315B] dark:text-white overflow-hidden transition-colors duration-300">
       {/* Background glow matching screenshot */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-[#4295DC]/20 blur-[150px] rounded-full pointer-events-none" />
 
@@ -31,7 +31,7 @@ export default function SuccessCases() {
           whileHover={{ y: -6, scale: 1.01 }}
           viewport={{ once: false, margin: "-60px" }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="bg-white dark:bg-[#0E315B]/90 border border-slate-200 dark:border-[#4295DC]/40 rounded-3xl p-6 sm:p-8 shadow-2xl backdrop-blur-md transition-colors duration-300 cursor-pointer"
+          className="bg-white dark:bg-[#1E293B] border border-slate-200 dark:border-slate-700/60 rounded-3xl p-6 sm:p-8 shadow-2xl backdrop-blur-md transition-colors duration-300 cursor-pointer"
         >
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             {/* Image Block Left */}
@@ -51,7 +51,7 @@ export default function SuccessCases() {
               <h3 className="text-xl sm:text-2xl font-extrabold text-[#0E315B] dark:text-white leading-snug">
                 Diseño e Instalación de Data Center, Redes de Fibra Óptica y CCTV Centralizado
               </h3>
-              <p className="text-[#5A6B80] dark:text-[#B0B1B0] text-sm sm:text-base leading-relaxed font-light">
+              <p className="text-[#5A6B80] dark:text-slate-300 text-sm sm:text-base leading-relaxed font-light">
                 Proyecto integral "Llave en mano" que incluyó cableado estructurado, respaldo energético con UPS de alta capacidad, climatización de precisión para servidores y sistema de videovigilancia con analítica en tiempo real.
               </p>
 

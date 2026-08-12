@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function WhyUs() {
   return (
-    <section id="por-que-nosotros" className="py-20 bg-gradient-to-b from-[#F0F5FA] via-white to-[#F0F5FA] dark:from-[#191715] dark:via-[#0E315B]/80 dark:to-[#191715] relative overflow-hidden transition-colors duration-300">
+    <section id="por-que-nosotros" className="py-20 bg-gradient-to-b from-[#F0F5FA] via-white to-[#F0F5FA] dark:from-[#0F172A] dark:via-[#162238] dark:to-[#0F172A] relative overflow-hidden transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 relative z-10">
 
         {/* Block 1: ¿Por qué elegir a EMPROTEC? */}
@@ -16,7 +16,7 @@ export default function WhyUs() {
           whileHover={{ y: -6 }}
           viewport={{ once: false, margin: "-60px" }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="bg-white dark:bg-[#0E315B] text-slate-900 dark:text-white rounded-3xl p-8 sm:p-12 shadow-xl border border-slate-200 dark:border-[#4295DC]/30 transition-all duration-300"
+          className="bg-white dark:bg-[#1E293B] text-slate-900 dark:text-white rounded-3xl p-8 sm:p-12 shadow-xl border border-slate-200 dark:border-slate-700/60 transition-all duration-300"
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             {/* Image Left */}
@@ -37,7 +37,7 @@ export default function WhyUs() {
                 ¿Por qué elegir a <span className="text-[#4295DC]">EMPROTEC</span>?
               </h2>
 
-              <div className="space-y-3 text-slate-700 dark:text-[#B0B1B0] text-sm sm:text-base leading-relaxed">
+              <div className="space-y-3 text-slate-700 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
                 <p>
                   <strong className="text-[#4295DC] font-bold">Proyectos "Llave en mano":</strong> Diseñamos, proveemos e instalamos la infraestructura completa sin fricciones ni intermediarios.
                 </p>
@@ -71,7 +71,7 @@ export default function WhyUs() {
           whileHover={{ y: -6 }}
           viewport={{ once: false, margin: "-60px" }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="bg-white dark:bg-[#0E315B] text-slate-900 dark:text-white rounded-3xl p-8 sm:p-12 shadow-xl border border-slate-200 dark:border-[#4295DC]/30 transition-all duration-300"
+          className="bg-white dark:bg-[#1E293B] text-slate-900 dark:text-white rounded-3xl p-8 sm:p-12 shadow-xl border border-slate-200 dark:border-slate-700/60 transition-all duration-300"
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             {/* Content Left */}
@@ -80,7 +80,7 @@ export default function WhyUs() {
                 ¿Por qué contar con un <span className="text-[#4295DC]">aliado en ingeniería y TI</span>?
               </h2>
 
-              <div className="space-y-3 text-slate-700 dark:text-[#B0B1B0] text-sm sm:text-base leading-relaxed">
+              <div className="space-y-3 text-slate-700 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
                 <p>
                   Tanto en proyectos corporativos como residenciales, contar con ingenieros especializados asegura que el cableado estructurado, la fibra óptica, los servidores y los respaldos energéticos cumplan con normativas internacionales.
                 </p>

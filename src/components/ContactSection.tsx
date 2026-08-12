@@ -41,7 +41,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contacto" className="py-28 bg-gradient-to-b from-white via-slate-50 to-slate-100 dark:from-[#181818] dark:via-[#1F1F1F] dark:to-[#181818] text-slate-900 dark:text-white relative overflow-hidden transition-colors duration-300">
+    <section id="contacto" className="py-28 bg-gradient-to-b from-white via-slate-50 to-slate-100 dark:from-[#0F172A] dark:via-[#162238] dark:to-[#0F172A] text-slate-900 dark:text-white relative overflow-hidden transition-colors duration-300">
       
       {/* Background Glow Orbs */}
       <div className="absolute top-1/4 -left-20 w-96 h-96 bg-[#4295DC]/10 rounded-full blur-[140px] pointer-events-none" />
@@ -51,7 +51,7 @@ export default function ContactSection() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto">
-          <span className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-widest text-[#4295DC] bg-white dark:bg-[#1F1F1F] px-4 py-1.5 rounded-full border border-slate-200 dark:border-neutral-800 shadow-sm">
+          <span className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-widest text-[#4295DC] bg-white dark:bg-slate-800 px-4 py-1.5 rounded-full border border-slate-200 dark:border-slate-700/60 shadow-sm">
             <Sparkles className="w-3.5 h-3.5" /> CANALES DIRECTOS DE ATENCIÓN
           </span>
 
@@ -73,7 +73,7 @@ export default function ContactSection() {
             {/* Phone & WhatsApp Card */}
             <motion.div
               whileHover={{ y: -4 }}
-              className="bg-white dark:bg-[#1F1F1F] p-7 rounded-[28px] shadow-xl border border-slate-200/80 dark:border-neutral-800 space-y-4 relative overflow-hidden group"
+              className="bg-white dark:bg-[#1E293B] p-7 rounded-[28px] shadow-xl border border-slate-200/80 dark:border-slate-700/60 space-y-4 relative overflow-hidden group"
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
@@ -90,7 +90,7 @@ export default function ContactSection() {
 
                 <button
                   onClick={() => copyToClipboard('713-22727', 'phone')}
-                  className="p-2 rounded-xl bg-slate-100 dark:bg-neutral-800 text-slate-500 dark:text-slate-400 hover:text-[#4295DC] transition-colors"
+                  className="p-2 rounded-xl bg-slate-100 dark:bg-slate-700/60 text-slate-500 dark:text-slate-300 hover:text-[#4295DC] transition-colors"
                   title="Copiar teléfono"
                 >
                   {copiedField === 'phone' ? <Check className="w-4 h-4 text-emerald-500" /> : <Copy className="w-4 h-4" />}
@@ -102,7 +102,7 @@ export default function ContactSection() {
                   href="https://wa.me/59171322727"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3.5 rounded-2xl bg-slate-50 dark:bg-[#181818] hover:bg-[#4295DC] hover:text-white text-[#0E315B] dark:text-slate-200 border border-slate-200 dark:border-neutral-800 transition-all font-extrabold text-xs flex items-center justify-between group/link"
+                  className="p-3.5 rounded-2xl bg-slate-50 dark:bg-[#162238] hover:bg-[#4295DC] hover:text-white text-[#0E315B] dark:text-slate-200 border border-slate-200 dark:border-slate-700/60 transition-all font-extrabold text-xs flex items-center justify-between group/link"
                 >
                   <span>📱 713-22727</span>
                   <ArrowUpRight className="w-3.5 h-3.5 group-hover/link:translate-x-0.5" />
@@ -112,7 +112,7 @@ export default function ContactSection() {
                   href="https://wa.me/59177006615"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3.5 rounded-2xl bg-slate-50 dark:bg-[#181818] hover:bg-[#4295DC] hover:text-white text-[#0E315B] dark:text-slate-200 border border-slate-200 dark:border-neutral-800 transition-all font-extrabold text-xs flex items-center justify-between group/link"
+                  className="p-3.5 rounded-2xl bg-slate-50 dark:bg-[#162238] hover:bg-[#4295DC] hover:text-white text-[#0E315B] dark:text-slate-200 border border-slate-200 dark:border-slate-700/60 transition-all font-extrabold text-xs flex items-center justify-between group/link"
                 >
                   <span>📱 77006615</span>
                   <ArrowUpRight className="w-3.5 h-3.5 group-hover/link:translate-x-0.5" />
@@ -126,19 +126,19 @@ export default function ContactSection() {
               {/* Location Card */}
               <motion.div
                 whileHover={{ y: -4 }}
-                className="bg-white dark:bg-[#1F1F1F] p-6 rounded-[28px] shadow-xl border border-slate-200/80 dark:border-neutral-800 space-y-2"
+                className="bg-white dark:bg-[#1E293B] p-6 rounded-[28px] shadow-xl border border-slate-200/80 dark:border-slate-700/60 space-y-2"
               >
                 <div className="w-10 h-10 rounded-xl bg-[#4295DC]/10 border border-[#4295DC]/30 flex items-center justify-center text-[#4295DC]">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <h4 className="text-sm font-extrabold text-[#0E315B] dark:text-white font-['Raleway']">Ubicación Sede</h4>
-                <p className="text-xs text-slate-500 dark:text-slate-400 font-light">Calle Barron #435, Santa Cruz — Bolivia</p>
+                <p className="text-xs text-slate-500 dark:text-slate-300 font-light">Calle Barron #435, Santa Cruz — Bolivia</p>
               </motion.div>
 
               {/* Email Card */}
               <motion.div
                 whileHover={{ y: -4 }}
-                className="bg-white dark:bg-[#1F1F1F] p-6 rounded-[28px] shadow-xl border border-slate-200/80 dark:border-neutral-800 space-y-2"
+                className="bg-white dark:bg-[#1E293B] p-6 rounded-[28px] shadow-xl border border-slate-200/80 dark:border-slate-700/60 space-y-2"
               >
                 <div className="w-10 h-10 rounded-xl bg-[#4295DC]/10 border border-[#4295DC]/30 flex items-center justify-center text-[#4295DC]">
                   <Mail className="w-5 h-5" />
@@ -155,7 +155,7 @@ export default function ContactSection() {
             </div>
 
             {/* Styled Map Container */}
-            <div className="relative rounded-[28px] overflow-hidden shadow-2xl border border-slate-200/80 dark:border-neutral-800 h-56 group">
+            <div className="relative rounded-[28px] overflow-hidden shadow-2xl border border-slate-200/80 dark:border-slate-700/60 h-56 group">
               <iframe
                 title="Mapa Ubicación EMPROTEC Santa Cruz"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57008.2046460395!2d-63.208479!3d-17.783324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93f1e81308d249f7%3A0xb35a09c25381f9b3!2sSanta%20Cruz%20de%20la%20Sierra%2C%20Bolivia!5e0!3m2!1ses!2sbo!4v1700000000000!5m2!1ses!2sbo"
@@ -168,7 +168,7 @@ export default function ContactSection() {
                 className="grayscale group-hover:grayscale-0 transition-all duration-700"
               />
 
-              <div className="absolute bottom-4 left-4 right-4 p-3 rounded-2xl bg-white/90 dark:bg-[#1F1F1F]/90 backdrop-blur-md border border-slate-200 dark:border-neutral-800 flex items-center justify-between text-xs font-bold text-[#0E315B] dark:text-white">
+              <div className="absolute bottom-4 left-4 right-4 p-3 rounded-2xl bg-white/90 dark:bg-[#1E293B]/90 backdrop-blur-md border border-slate-200 dark:border-slate-700/60 flex items-center justify-between text-xs font-bold text-[#0E315B] dark:text-white">
                 <span className="flex items-center gap-1.5">
                   <MapPin className="w-4 h-4 text-[#4295DC]" /> Santa Cruz, Bolivia
                 </span>
@@ -182,19 +182,19 @@ export default function ContactSection() {
 
           {/* Right Column: High Impact Interactive Form */}
           <div className="lg:col-span-7">
-            <div className="bg-[#F0F4F8] dark:bg-[#1F1F1F] rounded-[32px] p-8 sm:p-12 shadow-2xl border border-slate-200/80 dark:border-neutral-800 space-y-6">
+            <div className="bg-[#F0F4F8] dark:bg-[#1E293B] rounded-[32px] p-8 sm:p-12 shadow-2xl border border-slate-200/80 dark:border-slate-700/60 space-y-6">
               
-              <div className="flex items-center justify-between border-b border-slate-200/50 dark:border-neutral-800 pb-5">
+              <div className="flex items-center justify-between border-b border-slate-200/50 dark:border-slate-700/60 pb-5">
                 <div>
                   <h3 className="text-2xl sm:text-3xl font-black text-[#0E315B] dark:text-white font-['Raleway']">
                     Solicitud de Ingeniería
                   </h3>
-                  <p className="text-xs text-slate-500 dark:text-slate-400 font-light mt-1">
+                  <p className="text-xs text-slate-500 dark:text-slate-300 font-light mt-1">
                     Completa el formulario y te enviaremos una propuesta formal en menos de 24 horas.
                   </p>
                 </div>
 
-                <div className="hidden sm:flex items-center gap-1 text-[11px] font-bold text-slate-500 dark:text-slate-400 bg-white/85 dark:bg-[#181818] px-3 py-1.5 rounded-full border border-slate-200/80 dark:border-neutral-800">
+                <div className="hidden sm:flex items-center gap-1 text-[11px] font-bold text-slate-500 dark:text-slate-300 bg-white/85 dark:bg-[#162238] px-3 py-1.5 rounded-full border border-slate-200/80 dark:border-slate-700/60">
                   <Clock className="w-3.5 h-3.5 text-[#4295DC]" />
                   <span>Respuesta en &lt; 24h</span>
                 </div>
@@ -231,7 +231,7 @@ export default function ContactSection() {
                         placeholder="Ej. Ing. Carlos Mendoza"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full px-4 py-3.5 rounded-2xl bg-white dark:bg-[#181818] border border-slate-200 dark:border-neutral-800 text-[#0E315B] dark:text-white placeholder-gray-400 dark:placeholder-gray-500 text-sm focus:outline-none focus:border-[#4295DC] focus:ring-2 focus:ring-[#4295DC]/25 transition-all shadow-sm"
+                        className="w-full px-4 py-3.5 rounded-2xl bg-white dark:bg-[#162238] border border-slate-200 dark:border-slate-700/60 text-[#0E315B] dark:text-white placeholder-gray-400 dark:placeholder-slate-400 text-sm focus:outline-none focus:border-[#4295DC] focus:ring-2 focus:ring-[#4295DC]/25 transition-all shadow-sm"
                       />
                     </div>
 
@@ -244,7 +244,7 @@ export default function ContactSection() {
                         placeholder="Ej. Grupo Logístico SRL"
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                        className="w-full px-4 py-3.5 rounded-2xl bg-white dark:bg-[#181818] border border-slate-200 dark:border-neutral-800 text-[#0E315B] dark:text-white placeholder-gray-400 dark:placeholder-gray-500 text-sm focus:outline-none focus:border-[#4295DC] focus:ring-2 focus:ring-[#4295DC]/25 transition-all shadow-sm"
+                        className="w-full px-4 py-3.5 rounded-2xl bg-white dark:bg-[#162238] border border-slate-200 dark:border-slate-700/60 text-[#0E315B] dark:text-white placeholder-gray-400 dark:placeholder-slate-400 text-sm focus:outline-none focus:border-[#4295DC] focus:ring-2 focus:ring-[#4295DC]/25 transition-all shadow-sm"
                       />
                     </div>
                   </div>
@@ -260,7 +260,7 @@ export default function ContactSection() {
                         placeholder="+591 70000000"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full px-4 py-3.5 rounded-2xl bg-white dark:bg-[#181818] border border-slate-200 dark:border-neutral-800 text-[#0E315B] dark:text-white placeholder-gray-400 dark:placeholder-gray-500 text-sm focus:outline-none focus:border-[#4295DC] focus:ring-2 focus:ring-[#4295DC]/25 transition-all shadow-sm"
+                        className="w-full px-4 py-3.5 rounded-2xl bg-white dark:bg-[#162238] border border-slate-200 dark:border-slate-700/60 text-[#0E315B] dark:text-white placeholder-gray-400 dark:placeholder-slate-400 text-sm focus:outline-none focus:border-[#4295DC] focus:ring-2 focus:ring-[#4295DC]/25 transition-all shadow-sm"
                       />
                     </div>
 
@@ -274,7 +274,7 @@ export default function ContactSection() {
                         placeholder="carlos@empresa.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full px-4 py-3.5 rounded-2xl bg-white dark:bg-[#181818] border border-slate-200 dark:border-neutral-800 text-[#0E315B] dark:text-white placeholder-gray-400 dark:placeholder-gray-500 text-sm focus:outline-none focus:border-[#4295DC] focus:ring-2 focus:ring-[#4295DC]/25 transition-all shadow-sm"
+                        className="w-full px-4 py-3.5 rounded-2xl bg-white dark:bg-[#162238] border border-slate-200 dark:border-slate-700/60 text-[#0E315B] dark:text-white placeholder-gray-400 dark:placeholder-slate-400 text-sm focus:outline-none focus:border-[#4295DC] focus:ring-2 focus:ring-[#4295DC]/25 transition-all shadow-sm"
                       />
                     </div>
                   </div>
@@ -289,7 +289,7 @@ export default function ContactSection() {
                       placeholder="Describe brevemente la cantidad de cámaras, puntos de red, servidores o equipos requeridos..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-4 py-3.5 rounded-2xl bg-white dark:bg-[#181818] border border-slate-200 dark:border-neutral-800 text-[#0E315B] dark:text-white placeholder-gray-400 dark:placeholder-gray-500 text-sm focus:outline-none focus:border-[#4295DC] focus:ring-2 focus:ring-[#4295DC]/25 transition-all shadow-sm resize-none"
+                      className="w-full px-4 py-3.5 rounded-2xl bg-white dark:bg-[#162238] border border-slate-200 dark:border-slate-700/60 text-[#0E315B] dark:text-white placeholder-gray-400 dark:placeholder-slate-400 text-sm focus:outline-none focus:border-[#4295DC] focus:ring-2 focus:ring-[#4295DC]/25 transition-all shadow-sm resize-none"
                     />
                   </div>
 

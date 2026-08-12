@@ -63,12 +63,12 @@ const COLOR_BRANDS: BrandLogo[] = [
 
 export default function PartnersSection() {
   return (
-    <section id="partners" className="py-20 bg-white dark:bg-[#181818] text-slate-900 dark:text-white relative overflow-hidden transition-colors duration-300 border-t border-slate-200 dark:border-neutral-800">
+    <section id="partners" className="py-20 bg-white dark:bg-[#0F172A] text-slate-900 dark:text-white relative overflow-hidden transition-colors duration-300 border-t border-slate-200 dark:border-slate-700/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
         
         {/* Minimalist Section Tag Header */}
         <div className="text-center max-w-2xl mx-auto">
-          <span className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-widest text-[#4295DC] bg-slate-100 dark:bg-[#1F1F1F] px-4 py-1 rounded-full border border-slate-200 dark:border-neutral-800">
+          <span className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-widest text-[#4295DC] bg-slate-100 dark:bg-slate-800 px-4 py-1 rounded-full border border-slate-200 dark:border-slate-700/60">
             <Sparkles className="w-3.5 h-3.5" /> ALIANZAS & MARCAS HOMOLOGADAS
           </span>
 
