@@ -12,6 +12,7 @@ import EditorialWhyUsSection from "@/components/EditorialWhyUsSection";
 import StickyTimelineSection from "@/components/StickyTimelineSection";
 import EditorialProjectsSection from "@/components/EditorialProjectsSection";
 import FeaturedTestimonialSection from "@/components/FeaturedTestimonialSection";
+import ClientsSection from "@/components/ClientsSection";
 import PartnersSection from "@/components/PartnersSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -91,7 +92,10 @@ export default function Home() {
       {/* 11. Sección 09 — TESTIMONIOS (Testimonio Destacado Único) */}
       <FeaturedTestimonialSection />
 
-      {/* 12. Contacto & Mapa Interactivo */}
+      {/* 12. EMPRESAS CLIENTES (Supermercados Fidalga, NUR Srl, Orbol SA, Hotel Lido, Bolivian Automotors, Mamaya, etc.) */}
+      <ClientsSection />
+
+      {/* 13. Contacto & Mapa Interactivo */}
       <ContactSection />
 
       {/* 13. PARTNERS & MARCAS (Ubicado justo arriba del Footer) */}

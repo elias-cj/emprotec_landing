@@ -26,7 +26,7 @@ export default function HeroSection() {
       id="inicio"
       style={{ scale: heroScale, opacity: heroOpacity }}
       onMouseMove={handleMouseMove}
-      className="relative min-h-screen pt-28 pb-16 flex flex-col justify-between bg-white dark:bg-[#0F172A] text-slate-900 dark:text-white overflow-hidden select-none transition-colors duration-300"
+      className="relative min-h-screen pt-24 pb-8 flex flex-col justify-between bg-white dark:bg-[#0F172A] text-slate-900 dark:text-white overflow-hidden select-none transition-colors duration-300"
     >
       {/* Background Subtle Gradient Blobs */}
       <div className="absolute top-1/4 -left-20 w-96 h-96 bg-[#4295DC]/10 rounded-full blur-[140px] pointer-events-none" />

@@ -30,6 +30,7 @@ export default function Header() {
     { name: "Productos", href: "#servicios-y-productos" },
     { name: "Nosotros", href: "#nosotros" },
     { name: "Proyectos", href: "#proyectos" },
+    { name: "Clientes", href: "#empresas-clientes" },
     { name: "Contacto", href: "#contacto" },
     { name: "Partners", href: "#partners" },
   ];
@@ -49,9 +50,9 @@ export default function Header() {
           <Image
             src="/assets/logo/logo_emprotec.png"
             alt="EMPROTEC Logo"
-            width={200}
-            height={60}
-            className="h-9 sm:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            width={280}
+            height={90}
+            className="h-14 sm:h-16 md:h-18 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             priority
           />
         </Link>

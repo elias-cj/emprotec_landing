@@ -17,7 +17,7 @@ export const EMPROTEC_12_ITEMS: CatalogItem[] = [
     name: 'Cámaras de Seguridad',
     price: 790.0,
     category: 'Seguridad & CCTV',
-    brand: 'Hikvision',
+    brand: 'Hikvision / Hanwha',
     description: 'Cámaras IP 4K ColorVu con visión nocturna a color y grabación NVR.',
     tags: ['CCTV', 'ColorVu', 'Producto'],
     image: '/assets/cctv.jpg',
@@ -161,12 +161,12 @@ export default function ServicesAndProductsGrid({ onAddToCart }: ServicesAndProd
   });
 
   return (
-    <section id="servicios-y-productos" className="py-24 bg-white dark:bg-[#0F172A] text-slate-900 dark:text-white relative overflow-hidden transition-colors duration-300 border-t border-slate-200 dark:border-slate-700/60">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-10">
+    <section id="servicios-y-productos" className="py-10 bg-slate-100/70 dark:bg-[#0F172A] text-slate-900 dark:text-white relative overflow-hidden transition-colors duration-300 border-t border-slate-200 dark:border-slate-700/60">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-[#4295DC] bg-slate-100 dark:bg-slate-800 px-4 py-1.5 rounded-full border border-slate-200 dark:border-slate-700/60 shadow-sm">
+          <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-[#4295DC] bg-white dark:bg-slate-800 px-4 py-1.5 rounded-full border border-slate-200 dark:border-slate-700/60 shadow-sm">
             <Sparkles className="w-3.5 h-3.5" /> CATÁLOGO OFICIAL EMPROTEC
           </span>
 
@@ -186,7 +186,7 @@ export default function ServicesAndProductsGrid({ onAddToCart }: ServicesAndProd
             className={`px-5 py-2 rounded-full text-xs font-black uppercase tracking-wider transition-all duration-300 ${
               filter === 'todos'
                 ? 'bg-[#0E315B] dark:bg-[#4295DC] text-white shadow-lg scale-105'
-                : 'bg-slate-100 dark:bg-[#1E293B] text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700/60 hover:bg-slate-200 dark:hover:bg-slate-700'
+                : 'bg-white dark:bg-[#1E293B] text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700/60 hover:bg-slate-100 dark:hover:bg-slate-700'
             }`}
           >
             Todos ({EMPROTEC_12_ITEMS.length})
@@ -197,7 +197,7 @@ export default function ServicesAndProductsGrid({ onAddToCart }: ServicesAndProd
             className={`px-5 py-2 rounded-full text-xs font-black uppercase tracking-wider transition-all duration-300 ${
               filter === 'producto'
                 ? 'bg-[#0E315B] dark:bg-[#4295DC] text-white shadow-lg scale-105'
-                : 'bg-slate-100 dark:bg-[#1E293B] text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700/60 hover:bg-slate-200 dark:hover:bg-slate-700'
+                : 'bg-white dark:bg-[#1E293B] text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700/60 hover:bg-slate-100 dark:hover:bg-slate-700'
             }`}
           >
             Productos ({EMPROTEC_12_ITEMS.filter((i) => i.itemType === 'producto').length})
@@ -208,7 +208,7 @@ export default function ServicesAndProductsGrid({ onAddToCart }: ServicesAndProd
             className={`px-5 py-2 rounded-full text-xs font-black uppercase tracking-wider transition-all duration-300 ${
               filter === 'servicio'
                 ? 'bg-[#0E315B] dark:bg-[#4295DC] text-white shadow-lg scale-105'
-                : 'bg-slate-100 dark:bg-[#1E293B] text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700/60 hover:bg-slate-200 dark:hover:bg-slate-700'
+                : 'bg-white dark:bg-[#1E293B] text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700/60 hover:bg-slate-100 dark:hover:bg-slate-700'
             }`}
           >
             Servicios ({EMPROTEC_12_ITEMS.filter((i) => i.itemType === 'servicio').length})
@@ -216,7 +216,7 @@ export default function ServicesAndProductsGrid({ onAddToCart }: ServicesAndProd
         </div>
 
         {/* Dynamic Grid */}
-        <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <AnimatePresence>
             {filteredItems.map((item) => {
               const priceFormatted = `$${item.price.toLocaleString('de-DE', { minimumFractionDigits: 2 })}`;
@@ -230,7 +230,7 @@ export default function ServicesAndProductsGrid({ onAddToCart }: ServicesAndProd
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.3 }}
-                  className="flex flex-col justify-between space-y-3 group"
+                  className="flex flex-col justify-between p-4 rounded-2xl bg-white dark:bg-[#1E293B] border border-slate-200/90 dark:border-slate-700/60 shadow-sm hover:shadow-xl transition-all duration-300 group space-y-3"
                 >
                   <div>
                     {/* Square Image Container */}

@@ -125,12 +125,12 @@ export default function InteractiveSolutionsExplorer() {
   const activeSol = SOLUTIONS_DATA[activeIdx];
 
   return (
-    <section id="soluciones" className="py-24 bg-[#F8FAFC] dark:bg-[#0F172A] text-slate-900 dark:text-white relative overflow-hidden transition-colors duration-300 border-b border-slate-200 dark:border-slate-700/60">
+    <section id="soluciones" className="py-10 bg-slate-100/80 dark:bg-[#0F172A] text-slate-900 dark:text-white relative overflow-hidden transition-colors duration-300 border-b border-slate-200 dark:border-slate-700/60">
       
       {/* Background Glow */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#4295DC]/5 rounded-full blur-[140px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
@@ -164,7 +164,7 @@ export default function InteractiveSolutionsExplorer() {
                   className={`w-full p-4 rounded-2xl text-left transition-all duration-300 border flex items-center justify-between group ${
                     isSelected
                       ? "bg-[#0E315B] dark:bg-[#4295DC] text-white border-[#0E315B] dark:border-[#4295DC] shadow-xl translate-x-2"
-                      : "bg-white dark:bg-[#1E293B] text-slate-700 dark:text-slate-200 border-slate-200/80 dark:border-slate-700/60 hover:bg-slate-100 dark:hover:bg-slate-700/60"
+                      : "bg-white dark:bg-[#1E293B] text-slate-800 dark:text-slate-200 border-slate-200 dark:border-slate-700/60 shadow-sm hover:shadow-md hover:bg-slate-50 dark:hover:bg-slate-700/60"
                   }`}
                 >
                   <div className="flex items-center gap-3">
@@ -188,9 +188,11 @@ export default function InteractiveSolutionsExplorer() {
                     </div>
                   </div>
 
-                  <span className="text-xs font-bold font-['Raleway'] opacity-60">
-                    {sol.shortTag}
-                  </span>
+                  <ArrowUpRight
+                    className={`w-4 h-4 transition-transform ${
+                      isSelected ? "text-white translate-x-0.5 -translate-y-0.5" : "text-slate-400 opacity-0 group-hover:opacity-100"
+                    }`}
+                  />
                 </button>
               );
             })}
@@ -205,7 +207,7 @@ export default function InteractiveSolutionsExplorer() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: -20, scale: 0.98 }}
                 transition={{ duration: 0.4 }}
-                className="bg-white dark:bg-[#1E293B] rounded-3xl p-6 sm:p-10 shadow-2xl border border-slate-200/80 dark:border-slate-700/60 space-y-6"
+                className="bg-white dark:bg-[#1E293B] rounded-3xl p-6 sm:p-10 shadow-xl border border-slate-200/90 dark:border-slate-700/60 space-y-6"
               >
                 {/* Visual Image Banner */}
                 <div className="relative w-full h-56 sm:h-72 rounded-2xl overflow-hidden shadow-lg bg-slate-800 border border-slate-200 dark:border-slate-700/60">

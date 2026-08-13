@@ -41,13 +41,13 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contacto" className="py-28 bg-gradient-to-b from-white via-slate-50 to-slate-100 dark:from-[#0F172A] dark:via-[#162238] dark:to-[#0F172A] text-slate-900 dark:text-white relative overflow-hidden transition-colors duration-300">
+    <section id="contacto" className="py-10 bg-slate-100/80 dark:from-[#0F172A] dark:via-[#162238] dark:to-[#0F172A] text-slate-900 dark:text-white relative overflow-hidden transition-colors duration-300">
       
       {/* Background Glow Orbs */}
       <div className="absolute top-1/4 -left-20 w-96 h-96 bg-[#4295DC]/10 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute bottom-10 right-0 w-[500px] h-[500px] bg-slate-200/60 dark:bg-neutral-900/40 rounded-full blur-[140px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto">
@@ -165,7 +165,7 @@ export default function ContactSection() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="grayscale group-hover:grayscale-0 transition-all duration-700"
+                className="w-full h-full transition-all duration-300 group-hover:scale-105"
               />
 
               <div className="absolute bottom-4 left-4 right-4 p-3 rounded-2xl bg-white/90 dark:bg-[#1E293B]/90 backdrop-blur-md border border-slate-200 dark:border-slate-700/60 flex items-center justify-between text-xs font-bold text-[#0E315B] dark:text-white">
@@ -182,7 +182,7 @@ export default function ContactSection() {
 
           {/* Right Column: High Impact Interactive Form */}
           <div className="lg:col-span-7">
-            <div className="bg-[#F0F4F8] dark:bg-[#1E293B] rounded-[32px] p-8 sm:p-12 shadow-2xl border border-slate-200/80 dark:border-slate-700/60 space-y-6">
+            <div className="bg-white dark:bg-[#1E293B] rounded-[32px] p-8 sm:p-12 shadow-xl border border-slate-200/90 dark:border-slate-700/60 space-y-6">
               
               <div className="flex items-center justify-between border-b border-slate-200/50 dark:border-slate-700/60 pb-5">
                 <div>

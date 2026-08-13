@@ -6,11 +6,11 @@ import { Quote, Sparkles, Star } from "lucide-react";
 
 export default function FeaturedTestimonialSection() {
   return (
-    <section className="py-24 bg-white dark:bg-[#0F172A] text-slate-900 dark:text-white relative overflow-hidden transition-colors duration-300 border-t border-slate-200 dark:border-slate-700/60">
+    <section className="py-10 bg-white dark:bg-[#0F172A] text-slate-900 dark:text-white relative overflow-hidden transition-colors duration-300 border-t border-slate-200 dark:border-slate-700/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Tag Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-6">
           <span className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-widest text-[#4295DC] bg-slate-100 dark:bg-slate-800 px-4 py-1.5 rounded-full border border-slate-200 dark:border-slate-700/60">
             <Sparkles className="w-3.5 h-3.5" /> SECCIÓN 09 — EXPERIENCIA DE NUESTROS CLIENTES
           </span>

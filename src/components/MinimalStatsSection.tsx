@@ -52,11 +52,11 @@ export default function MinimalStatsSection() {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section ref={ref} className="py-14 sm:py-16 bg-white dark:bg-[#0F172A] text-slate-900 dark:text-white border-y border-slate-200/80 dark:border-slate-700/60 transition-colors duration-300">
+    <section ref={ref} className="py-8 sm:py-10 bg-white dark:bg-[#0F172A] text-slate-900 dark:text-white border-y border-slate-200/80 dark:border-slate-700/60 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Tag Header */}
-        <div className="mb-10 text-center">
+        <div className="mb-6 text-center">
           <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-[#4295DC] bg-slate-100 dark:bg-slate-800 px-4 py-1.5 rounded-full border border-slate-200 dark:border-slate-700/60">
             <Sparkles className="w-3.5 h-3.5" /> SECCIÓN 04 — CIFRAS QUE RESPALDAN NUESTRO TRABAJO
           </span>

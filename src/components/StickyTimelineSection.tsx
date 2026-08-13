@@ -63,11 +63,11 @@ export default function StickyTimelineSection() {
   const IconActive = activeStage.icon;
 
   return (
-    <section id="metodologia" className="py-24 bg-white dark:bg-[#0F172A] text-slate-900 dark:text-white relative overflow-hidden transition-colors duration-300">
+    <section id="metodologia" className="py-10 bg-white dark:bg-[#0F172A] text-slate-900 dark:text-white relative overflow-hidden transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-8">
           <span className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-widest text-[#4295DC] bg-slate-100 dark:bg-slate-800 px-4 py-1.5 rounded-full border border-slate-200 dark:border-slate-700/60">
             <Sparkles className="w-3.5 h-3.5" /> SECCIÓN 06 — METODOLOGÍA PROBADA
           </span>

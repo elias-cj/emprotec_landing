@@ -11,6 +11,7 @@ export interface BrandItem {
 
 const BRANDS_LIST: BrandItem[] = [
   { id: "hikvision", name: "HIKVISION", category: "CCTV & Seguridad" },
+  { id: "hanwha", name: "HANWHA VISION", category: "CCTV & Analítica AI" },
   { id: "ubiquiti", name: "UBIQUITI", category: "Redes Wi-Fi & Enlaces" },
   { id: "mikrotik", name: "MIKROTIK", category: "Routers & Firewalls" },
   { id: "apc", name: "APC by Schneider", category: "Energía & UPS" },
@@ -37,7 +38,7 @@ export default function BrandsSection() {
         </div>
 
         {/* Minimalist Brands Logos Grid (Grayscale to Color hover) */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4 items-center">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-9 gap-4 items-center">
           {BRANDS_LIST.map((brand) => (
             <motion.div
               key={brand.id}

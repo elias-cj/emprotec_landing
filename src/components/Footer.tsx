@@ -6,30 +6,30 @@ import { Phone, Mail, MapPin, Facebook, Linkedin, Instagram, MessageCircle } fro
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 dark:bg-[#0B132B] text-slate-300 text-xs py-16 border-t border-slate-800 dark:border-slate-700/60 transition-colors duration-300">
+    <footer className="bg-slate-100 dark:bg-[#0B132B] text-slate-700 dark:text-slate-300 text-xs py-16 border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Footer Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 items-start mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 items-start mb-12">
 
           {/* Column 1: EMPROTEC Branding */}
-          <div className="space-y-4 lg:col-span-1">
+          <div className="space-y-4 lg:col-span-2">
             <Image
               src="/assets/logo/logo_emprotec.png"
               alt="EMPROTEC Logo"
-              width={180}
-              height={60}
-              className="h-11 w-auto object-contain brightness-0 invert"
+              width={320}
+              height={100}
+              className="h-16 sm:h-20 md:h-24 w-auto object-contain"
             />
-            <p className="text-slate-400 text-xs leading-relaxed">
+            <p className="text-slate-600 dark:text-slate-400 text-xs leading-relaxed font-light max-w-sm">
               Venta, instalación y configuración de productos y soluciones de ingeniería tecnológica IT para hogares y empresas en Bolivia.
             </p>
           </div>
 
           {/* Column 2: Navegación */}
           <div className="space-y-3">
-            <h4 className="text-white font-bold uppercase tracking-wider text-xs font-['Raleway']">Navegación</h4>
-            <ul className="space-y-2">
+            <h4 className="text-[#0E315B] dark:text-white font-extrabold uppercase tracking-wider text-xs font-['Raleway']">Navegación</h4>
+            <ul className="space-y-2 text-slate-600 dark:text-slate-300 font-medium">
               <li><Link href="#inicio" className="hover:text-[#4295DC] transition-colors">Inicio</Link></li>
               <li><Link href="#soluciones" className="hover:text-[#4295DC] transition-colors">Soluciones</Link></li>
               <li><Link href="#servicios-y-productos" className="hover:text-[#4295DC] transition-colors">Productos & Servicios</Link></li>
@@ -42,8 +42,8 @@ export default function Footer() {
 
           {/* Column 3: Productos */}
           <div className="space-y-3">
-            <h4 className="text-white font-bold uppercase tracking-wider text-xs font-['Raleway']">Productos</h4>
-            <ul className="space-y-2">
+            <h4 className="text-[#0E315B] dark:text-white font-extrabold uppercase tracking-wider text-xs font-['Raleway']">Productos</h4>
+            <ul className="space-y-2 text-slate-600 dark:text-slate-300 font-medium">
               <li><Link href="#servicios-y-productos" className="hover:text-[#4295DC] transition-colors">Cámaras & Seguridad CCTV</Link></li>
               <li><Link href="#servicios-y-productos" className="hover:text-[#4295DC] transition-colors">Redes & Switches L3</Link></li>
               <li><Link href="#servicios-y-productos" className="hover:text-[#4295DC] transition-colors">Servidores Rack / Tower</Link></li>
@@ -54,8 +54,8 @@ export default function Footer() {
 
           {/* Column 4: Servicios */}
           <div className="space-y-3">
-            <h4 className="text-white font-bold uppercase tracking-wider text-xs font-['Raleway']">Servicios</h4>
-            <ul className="space-y-2">
+            <h4 className="text-[#0E315B] dark:text-white font-extrabold uppercase tracking-wider text-xs font-['Raleway']">Servicios</h4>
+            <ul className="space-y-2 text-slate-600 dark:text-slate-300 font-medium">
               <li><Link href="#soluciones" className="hover:text-[#4295DC] transition-colors">Instalación & Montaje TI</Link></li>
               <li><Link href="#soluciones" className="hover:text-[#4295DC] transition-colors">Cableado Estructurado & Fibra</Link></li>
               <li><Link href="#soluciones" className="hover:text-[#4295DC] transition-colors">Virtualización Cloud</Link></li>
@@ -66,10 +66,10 @@ export default function Footer() {
 
           {/* Column 5: Contacto Directo */}
           <div className="space-y-3">
-            <h4 className="text-white font-bold uppercase tracking-wider text-xs font-['Raleway']">Contacto</h4>
-            <div className="space-y-2 text-slate-300">
+            <h4 className="text-[#0E315B] dark:text-white font-extrabold uppercase tracking-wider text-xs font-['Raleway']">Contacto</h4>
+            <div className="space-y-2 text-slate-600 dark:text-slate-300 font-medium">
               <div className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-[#4295DC] shrink-0" />
+                <MapPin className="w-4 h-4 text-[#4295DC] shrink-0 mt-0.5" />
                 <span>Santa Cruz - Bolivia (Calle Barron #435)</span>
               </div>
               <div className="flex items-center gap-2">
@@ -84,16 +84,16 @@ export default function Footer() {
 
             {/* Social Links */}
             <div className="pt-2 flex items-center space-x-3">
-              <a href="https://wa.me/59171322727" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-slate-800 hover:bg-[#4295DC] text-white transition-colors" aria-label="WhatsApp">
+              <a href="https://wa.me/59171322727" target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-white hover:bg-[#4295DC] hover:text-white dark:hover:bg-[#4295DC] transition-colors shadow-sm" aria-label="WhatsApp">
                 <MessageCircle className="w-4 h-4" />
               </a>
-              <a href="#" className="p-2 rounded-lg bg-slate-800 hover:bg-[#4295DC] text-white transition-colors" aria-label="Facebook">
+              <a href="#" className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-white hover:bg-[#4295DC] hover:text-white dark:hover:bg-[#4295DC] transition-colors shadow-sm" aria-label="Facebook">
                 <Facebook className="w-4 h-4" />
               </a>
-              <a href="#" className="p-2 rounded-lg bg-slate-800 hover:bg-[#4295DC] text-white transition-colors" aria-label="LinkedIn">
+              <a href="#" className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-white hover:bg-[#4295DC] hover:text-white dark:hover:bg-[#4295DC] transition-colors shadow-sm" aria-label="LinkedIn">
                 <Linkedin className="w-4 h-4" />
               </a>
-              <a href="#" className="p-2 rounded-lg bg-slate-800 hover:bg-[#4295DC] text-white transition-colors" aria-label="Instagram">
+              <a href="#" className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-white hover:bg-[#4295DC] hover:text-white dark:hover:bg-[#4295DC] transition-colors shadow-sm" aria-label="Instagram">
                 <Instagram className="w-4 h-4" />
               </a>
             </div>
@@ -102,7 +102,7 @@ export default function Footer() {
         </div>
 
         {/* Footer Bottom Line */}
-        <div className="pt-8 border-t border-slate-800 dark:border-slate-700/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-400">
+        <div className="pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500 dark:text-slate-400">
           <p>© {new Date().getFullYear()} EMPROTEC. Todos los derechos reservados. Santa Cruz, Bolivia.</p>
           <div className="flex space-x-4">
             <Link href="#inicio" className="hover:text-[#4295DC] transition-colors">Términos de servicio</Link>

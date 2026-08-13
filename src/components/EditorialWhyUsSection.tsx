@@ -37,12 +37,12 @@ export default function EditorialWhyUsSection() {
   ];
 
   return (
-    <section id="nosotros" className="py-12 bg-slate-50 dark:bg-[#0F172A] text-slate-900 dark:text-white relative overflow-hidden transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-8">
+    <section id="nosotros" className="py-10 bg-slate-100/70 dark:bg-[#0F172A] text-slate-900 dark:text-white relative overflow-hidden transition-colors duration-300">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
         
         {/* Section Header */}
         <div className="max-w-3xl space-y-2">
-          <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-[#4295DC] bg-white dark:bg-slate-800 px-4 py-1 rounded-full border border-slate-200/80 dark:border-slate-700/60 shadow-sm">
+          <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-[#4295DC] bg-white dark:bg-slate-800 px-4 py-1 rounded-full border border-slate-200 dark:border-slate-700/60 shadow-sm">
             <Sparkles className="w-3.5 h-3.5" /> SECCIÓN 05 — POR QUÉ EMPROTEC
           </span>
 
@@ -67,7 +67,7 @@ export default function EditorialWhyUsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.4, delay: idx * 0.1 }}
-                className="bg-white dark:bg-[#1E293B] p-5 sm:p-6 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 shadow-lg flex flex-col justify-between space-y-4 group hover:border-[#4295DC] transition-all duration-300"
+                className="bg-white dark:bg-[#1E293B] p-5 sm:p-6 rounded-2xl border border-slate-200/90 dark:border-slate-700/60 shadow-md shadow-slate-200/60 flex flex-col justify-between space-y-4 group hover:border-[#4295DC] transition-all duration-300"
               >
                 {/* Image Banner */}
                 <div className="relative w-full h-36 sm:h-44 rounded-xl overflow-hidden shadow-md bg-slate-900">

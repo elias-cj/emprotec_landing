@@ -102,6 +102,7 @@ export default function ClientsPartners() {
               { name: "Fortinet", logo: "/assets/partners/fortinet.svg" },
               { name: "Ubiquiti Networks", logo: "/assets/partners/ubiquiti.svg" },
               { name: "Hikvision", logo: "/assets/partners/hikvision.svg" },
+              { name: "Hanwha Vision", logo: "/assets/partners/hanwha.svg" },
               { name: "APC by Schneider", logo: "/assets/partners/apc.svg" },
               { name: "VMware", logo: "/assets/partners/vmware.svg" },
               { name: "MikroTik", logo: "/assets/partners/mikrotik.svg" },
