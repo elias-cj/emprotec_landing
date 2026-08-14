@@ -31,7 +31,7 @@ export const EMPROTEC_12_ITEMS: CatalogItem[] = [
     brand: 'ZKTeco',
     description: 'Sistemas de comunicación residencial y corporativa con pantalla táctil IP.',
     tags: ['Videoportero', 'Producto'],
-    image: '/assets/comercializacion-y-ventas-01.webp',
+    image: '/assets/Videoporteros y Audioporteros.jpg',
     itemType: 'producto',
   },
   {
@@ -42,7 +42,7 @@ export const EMPROTEC_12_ITEMS: CatalogItem[] = [
     brand: 'Fortinet / Mikrotik',
     description: 'Dispositivos UTM con túneles VPN cifrados y protección contra intrusiones.',
     tags: ['Firewall', 'VPN', 'Producto'],
-    image: '/assets/blog-data-center-guide-1.jpg',
+    image: '/assets/fortinet-firewalls.png',
     itemType: 'producto',
   },
   {
@@ -53,7 +53,7 @@ export const EMPROTEC_12_ITEMS: CatalogItem[] = [
     brand: 'APC Schneider',
     description: 'Sistemas de energía ininterrumpida online senoidal pura para servidores y racks.',
     tags: ['UPS', 'APC', 'Producto'],
-    image: '/assets/ups.jpg',
+    image: '/assets/Ups.jpg',
     itemType: 'producto',
   },
   {
@@ -64,7 +64,7 @@ export const EMPROTEC_12_ITEMS: CatalogItem[] = [
     brand: 'Dell / Western Digital',
     description: 'Servidores Xeon High-Density y almacenamiento SAN/NAS con respaldo anti-ransomware.',
     tags: ['Servidores', 'NAS', 'Producto'],
-    image: '/assets/cloud.avif',
+    image: '/assets/Servidores de Almacenamiento Seguro y Eficiente.png',
     itemType: 'producto',
   },
   {
@@ -75,7 +75,7 @@ export const EMPROTEC_12_ITEMS: CatalogItem[] = [
     brand: 'EMPROTEC Certificado',
     description: 'Sensores de humo, detección de temperatura y barreras perimetrales fotoeléctricas.',
     tags: ['Incendio', 'Alarmas', 'Producto'],
-    image: '/assets/aprovisionamiento-y-cmpras.webp',
+    image: '/assets/sistema-de-alarmas-contra-incendios.webp',
     itemType: 'producto',
   },
 
@@ -88,7 +88,7 @@ export const EMPROTEC_12_ITEMS: CatalogItem[] = [
     brand: 'EMPROTEC Certificado',
     description: 'Instalación y configuración de torniquetes, biometría facial y marcación de personal.',
     tags: ['Biometría', 'Servicio'],
-    image: '/assets/produccion-fabricacion.webp',
+    image: '/assets/control_de_acceso.webp',
     itemType: 'servicio',
   },
   {
@@ -99,7 +99,7 @@ export const EMPROTEC_12_ITEMS: CatalogItem[] = [
     brand: 'Fluke Certified',
     description: 'Tendido, fusión de fibra y certificación de puntos de red Cat 6A / 7.',
     tags: ['Fibra Óptica', 'Cableado', 'Servicio'],
-    image: '/assets/distribucion-logistica.webp',
+    image: '/assets/Cableado de Fibra Óptica y Estructurado.jpg',
     itemType: 'servicio',
   },
   {
@@ -110,7 +110,7 @@ export const EMPROTEC_12_ITEMS: CatalogItem[] = [
     brand: 'EMPROTEC Certificado',
     description: 'Montaje de tableros de distribución, tierra física y protecciones termomagnéticas.',
     tags: ['Tableros', 'Energía', 'Servicio'],
-    image: '/assets/aliado-acelaracion-nuevo.webp',
+    image: '/assets/Cableado y Armado de Tableros Eléctricos.jpg',
     itemType: 'servicio',
   },
   {
@@ -121,7 +121,7 @@ export const EMPROTEC_12_ITEMS: CatalogItem[] = [
     brand: 'Ubiquiti / Mikrotik',
     description: 'Despliegue de Wi-Fi 6 Mesh corporativo y enlaces inalámbricos punto a punto.',
     tags: ['WiFi 6', 'Radio Enlace', 'Servicio'],
-    image: '/assets/aprovisionamiento-compras-sin-txt.webp',
+    image: '/assets/Configuración de Redes WiFi y Radio Enlaces.png',
     itemType: 'servicio',
   },
   {
@@ -132,7 +132,7 @@ export const EMPROTEC_12_ITEMS: CatalogItem[] = [
     brand: 'EMPROTEC Certificado',
     description: 'Instalación de motores de portón, iluminación inteligente e integración móvil.',
     tags: ['Domótica', 'Portones', 'Servicio'],
-    image: '/assets/comercializacion-ventas.webp',
+    image: '/assets/Automatización de Luces y Portones (Domótica).png',
     itemType: 'servicio',
   },
   {
@@ -143,7 +143,7 @@ export const EMPROTEC_12_ITEMS: CatalogItem[] = [
     brand: 'VMware / Hyper-V',
     description: 'Migración a entornos virtuales, clústeres de alta disponibilidad y backup en la nube.',
     tags: ['Virtualización', 'Cloud', 'Servicio'],
-    image: '/assets/porque-somos-diferentes-min.webp',
+    image: '/assets/Virtualización de Servicios y Sistemas.png',
     itemType: 'servicio',
   },
 ];
@@ -234,12 +234,12 @@ export default function ServicesAndProductsGrid({ onAddToCart }: ServicesAndProd
                 >
                   <div>
                     {/* Square Image Container */}
-                    <div className="relative w-full aspect-square overflow-hidden rounded-xl bg-slate-100 dark:bg-[#1E293B] border border-slate-200/80 dark:border-slate-700/60 mb-3 shadow-md">
+                    <div className="relative w-full aspect-square overflow-hidden rounded-xl bg-slate-50 dark:bg-[#162238] border border-slate-200/80 dark:border-slate-700/60 mb-3 shadow-md flex items-center justify-center p-2">
                       <Image
                         src={item.image!}
                         alt={item.name}
                         fill
-                        className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                        className="object-contain p-2 group-hover:scale-105 transition-transform duration-500"
                       />
 
                       <div className="absolute top-2.5 left-2.5">

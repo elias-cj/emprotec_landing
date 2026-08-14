@@ -27,7 +27,7 @@ export default function FeaturedTestimonialSection() {
           {/* Left Large Client Portrait */}
           <div className="lg:col-span-5 relative h-[380px] lg:h-[500px]">
             <Image
-              src="/assets/servicio-cliente-soporte.webp"
+              src="/assets/talento-joven.png"
               alt="Cliente Testimonio EMPROTEC"
               fill
               className="object-cover object-center"

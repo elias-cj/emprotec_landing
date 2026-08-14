@@ -15,7 +15,7 @@ export default function MotionTickerSection() {
       word: "CONECTIVIDAD",
       sub: "Fibra Óptica & Redes 10G",
       icon: Network,
-      img: "/assets/distribucion-logistica.webp",
+      img: "/assets/switches.avif",
     },
     {
       word: "SEGURIDAD",

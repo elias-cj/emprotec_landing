@@ -34,7 +34,7 @@ const PROJECTS_DATA: ProjectItem[] = [
     category: "Redes & Telecomunicaciones",
     desc: "Diseño y tendido de cableado estructurado categoría 6A y enlace troncal de fibra óptica monomodo.",
     solution: "Instalación de 120 puntos de red certificados, switches Cisco PoE+ gestionables y 15 Access Points Wi-Fi 6 UniFi LR.",
-    image: "/assets/blog-data-center-guide-1.jpg",
+    image: "/assets/Cableado de Fibra Óptica y Estructurado.jpg",
     results: ["Velocidades de 10Gbps en backbone", "Roaming Wi-Fi continuo en 5 pisos", "Certificación OTDR entregada"],
   },
   {
@@ -44,7 +44,7 @@ const PROJECTS_DATA: ProjectItem[] = [
     category: "Infraestructura & TI",
     desc: "Diseño e implementación de Data Center compacto con supresión de fuego limpia y respaldo energético ininterrumpido.",
     solution: "Montaje de 3 Racks de alta densidad, UPS APC Online 10KVA con banco de baterías de 4 horas y sistema Novec 1230.",
-    image: "/assets/ups.jpg",
+    image: "/assets/Cableado y Armado de Tableros Eléctricos.jpg",
     results: ["Cero minutos de inactividad registrados", "Protección completa contra fallas de red eléctrica", "Monitoreo térmico continuo"],
   },
   {
@@ -54,7 +54,7 @@ const PROJECTS_DATA: ProjectItem[] = [
     category: "Control de Acceso",
     desc: "Automatización de ingreso de personal y visitantes mediante terminales de reconocimiento facial de alta velocidad.",
     solution: "Instalación de 8 torniquetes con biometría ZKTeco integrada al software de recursos humanos e impresoras de badges.",
-    image: "/assets/produccion-fabricacion.webp",
+    image: "/assets/control_de_acceso.webp",
     results: ["Verificación en menos de 0.3 segundos", "Eliminación de tarjetas físicas duplicadas", "Reportes automatizados de asistencia"],
   },
   {
@@ -64,7 +64,7 @@ const PROJECTS_DATA: ProjectItem[] = [
     category: "Servidores & Cloud",
     desc: "Consolidación de infraestructura física legacy a un clúster virtual VMware con almacenamiento NAS redundante.",
     solution: "Servidores Dell PowerEdge Xeon en HA, arreglo de discos SAN/NAS WD Red Pro y copias de seguridad Veeam Backup.",
-    image: "/assets/cloud.avif",
+    image: "/assets/Virtualización de Servicios y Sistemas.png",
     results: ["Reducción de 60% en consumo eléctrico TI", "Recuperación de desastres (DRP) en 15 min", "Protección contra ransomware"],
   },
   {
@@ -74,7 +74,7 @@ const PROJECTS_DATA: ProjectItem[] = [
     category: "Domótica",
     desc: "Automatización de accesos vehiculares con brazos electromecánicos y control de iluminación inteligente por escenas.",
     solution: "Motores italianos de alta frecuencia, control centralizado por voz y app móvil para residentes.",
-    image: "/assets/comercializacion-ventas.webp",
+    image: "/assets/Automatización de Luces y Portones (Domótica).png",
     results: ["Ingreso automatizado por lectura de tag", "Reducción de tiempos de espera en portón", "Control inteligente de consumo energético"],
   },
 ];
@@ -112,12 +112,12 @@ export default function ProjectsShowcase() {
             >
               <div>
                 {/* Project Image */}
-                <div className="relative w-full aspect-16/10 overflow-hidden bg-slate-200 dark:bg-slate-800">
+                <div className="relative w-full aspect-16/10 overflow-hidden bg-slate-900 dark:bg-[#162238] flex items-center justify-center p-3">
                   <Image
                     src={proj.image}
                     alt={proj.title}
                     fill
-                    className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                    className="object-contain p-3 group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute top-4 left-4 z-10">
                     <span className="text-[10px] font-extrabold uppercase bg-[#0E315B]/90 dark:bg-[#4295DC] text-white px-3 py-1 rounded-full backdrop-blur-sm">

@@ -11,7 +11,7 @@ export default function EditorialWhyUsSection() {
       num: "01",
       desc: "Ingenieros altamente calificados que diseñan y ejecutan proyectos bajo normativas internacionales.",
       icon: Award,
-      image: "/assets/porque-somos-diferentes-min.webp",
+      image: "/assets/datacenter.jpg",
     },
     {
       title: "SEGURIDAD",
@@ -32,7 +32,7 @@ export default function EditorialWhyUsSection() {
       num: "04",
       desc: "Sistemas energéticos redundantes y contratos de soporte continuo para garantizar cero caídas.",
       icon: Shield,
-      image: "/assets/ups.jpg",
+      image: "/assets/Ups.jpg",
     },
   ];
 

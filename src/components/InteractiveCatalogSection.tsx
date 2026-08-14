@@ -25,7 +25,7 @@ const CATALOG_DATA: CatalogProductCategory[] = [
     brand: "DELL Technologies",
     price: "$3,800.00 USD",
     desc: "Servidor corporativo de alta densidad para entornos de virtualización crítica, fuentes redundantes y almacenamiento RAID.",
-    image: "/assets/cloud.avif",
+    image: "/assets/Servidores de Almacenamiento Seguro y Eficiente.png",
     specs: ["Dual Intel Xeon Scalable", "64GB RAM ECC DDR4", "Chasis Rack 1U 8-Bay"],
   },
   {
@@ -35,7 +35,7 @@ const CATALOG_DATA: CatalogProductCategory[] = [
     brand: "CISCO Systems",
     price: "$990.00 USD",
     desc: "Switch gestionable de nivel 3 para backbone corporativo, soporte de alimentación PoE+ 370W y uplinks de 10Gbps.",
-    image: "/assets/blog-data-center-guide-1.jpg",
+    image: "/assets/Cableado de Fibra Óptica y Estructurado.jpg",
     specs: ["24 Puertos PoE+ Gigabit", "4 Uplinks SFP+ 10G", "Gestión L3 Avanzada"],
   },
   {
@@ -55,7 +55,7 @@ const CATALOG_DATA: CatalogProductCategory[] = [
     brand: "EMPROTEC Certificado",
     price: "$1,200.00 USD",
     desc: "Tablero eléctrico de precisión para salas de cómputo con protecciones termomagnéticas y mallas de tierra física.",
-    image: "/assets/aprovisionamiento-y-cmpras.webp",
+    image: "/assets/Cableado y Armado de Tableros Eléctricos.jpg",
     specs: ["Interruptores Schneider", "Supresor de picos Clase II", "Medidor multifunción digital"],
   },
   {
@@ -65,7 +65,7 @@ const CATALOG_DATA: CatalogProductCategory[] = [
     brand: "APC by Schneider",
     price: "$750.00 USD",
     desc: "Sistema UPS de doble conversión online senoidal pura para respaldo ininterrumpido en Data Centers y racks.",
-    image: "/assets/ups.jpg",
+    image: "/assets/Ups.jpg",
     specs: ["Potencia 3000VA / 2700W", "Doble conversión online", "Baterías reemplazables en caliente"],
   },
   {
@@ -75,7 +75,7 @@ const CATALOG_DATA: CatalogProductCategory[] = [
     brand: "EMPROTEC Clima",
     price: "$855.00 USD",
     desc: "Control riguroso de temperatura, filtrado de partículas y nivel de humedad para salas de servidores críticas.",
-    image: "/assets/comercializacion-ventas.webp",
+    image: "/assets/datacenter.jpg",
     specs: ["Filtrado de aire de alta densidad", "Control de humedad digital", "Operación continua 24/7"],
   },
 ];
@@ -142,12 +142,12 @@ export default function InteractiveCatalogSection() {
                   
                   {/* Product Image Visual */}
                   <div className="md:col-span-6">
-                    <div className="relative w-full aspect-square rounded-2xl overflow-hidden shadow-xl border border-slate-800 bg-slate-950 p-4">
+                    <div className="relative w-full aspect-square rounded-2xl overflow-hidden shadow-xl border border-slate-800 bg-slate-950 p-4 flex items-center justify-center">
                       <Image
                         src={activeItem.image}
                         alt={activeItem.featuredTitle}
                         fill
-                        className="object-cover object-center"
+                        className="object-contain p-4"
                       />
                     </div>
                   </div>

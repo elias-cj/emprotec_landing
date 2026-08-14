@@ -18,7 +18,7 @@ const cardsGrid: CardItem[] = [
   {
     id: "r1-img",
     type: "image",
-    image: "/assets/produccion-fabricacion.webp",
+    image: "/assets/cctv.jpg",
   },
   {
     id: "r1-txt",
@@ -36,13 +36,13 @@ const cardsGrid: CardItem[] = [
   {
     id: "r2-img",
     type: "image",
-    image: "/assets/aprovisionamiento-y-cmpras.webp",
+    image: "/assets/Cableado y Armado de Tableros Eléctricos.jpg",
   },
   // Row 3
   {
     id: "r3-img",
     type: "image",
-    image: "/assets/blog-data-center-guide-1.jpg",
+    image: "/assets/Cableado de Fibra Óptica y Estructurado.jpg",
   },
   {
     id: "r3-txt",
@@ -60,13 +60,13 @@ const cardsGrid: CardItem[] = [
   {
     id: "r4-img",
     type: "image",
-    image: "/assets/distribucion-logistica.webp",
+    image: "/assets/Servidores de Almacenamiento Seguro y Eficiente.png",
   },
   // Row 5
   {
     id: "r5-img",
     type: "image",
-    image: "/assets/comercializacion-ventas.webp",
+    image: "/assets/Automatización de Luces y Portones (Domótica).png",
   },
   {
     id: "r5-txt",
@@ -84,7 +84,7 @@ const cardsGrid: CardItem[] = [
   {
     id: "r6-img",
     type: "image",
-    image: "/assets/servicio-cliente-soporte.webp",
+    image: "/assets/Virtualización de Servicios y Sistemas.png",
   },
 ];
 
@@ -176,12 +176,12 @@ export default function ServiceCards() {
               >
                 {card.type === "image" ? (
                   /* Image Card */
-                  <div className="relative w-full h-full overflow-hidden bg-slate-200 dark:bg-[#0E315B]">
+                  <div className="relative w-full h-full overflow-hidden bg-slate-900/90 dark:bg-[#0E315B]/90 flex items-center justify-center p-3">
                     <Image
                       src={card.image!}
                       alt="Servicio EMPROTEC"
                       fill
-                      className="object-cover object-center group-hover:scale-108 transition-transform duration-500"
+                      className="object-contain p-3 group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                 ) : (

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ShoppingCart, Search, Check, Sparkles, Eye, Filter, SlidersHorizontal } from 'lucide-react';
 import ProductDetailModal from './ProductDetailModal';
@@ -46,7 +47,7 @@ export const PRODUCTS_DATA: Product[] = [
     category: 'Seguridad & Control',
     description: 'Control de acceso y asistencia con lectura facial ultra rápida a distancia y exportación a software de RRHH.',
     tags: ['Recon. Facial', 'Huella', 'Control Puertas'],
-    image: '/assets/produccion-fabricacion.webp',
+    image: '/assets/control_de_acceso.webp',
     sku: 'ZK-[#0E315B]-FACIAL',
     stock: true,
   },
@@ -58,7 +59,7 @@ export const PRODUCTS_DATA: Product[] = [
     category: 'Seguridad & Control',
     description: 'Detección por aspiración y extinción con agente limpio para Data Centers sin residuo de agua.',
     tags: ['Agente Limpio', 'Detección Temprana', 'Data Center'],
-    image: '/assets/aliado-acelaracion-nuevo.webp',
+    image: '/assets/sistema-de-alarmas-contra-incendios.webp',
     sku: 'HK-FIRE-NOVEC',
     stock: true,
   },
@@ -72,7 +73,7 @@ export const PRODUCTS_DATA: Product[] = [
     category: 'Redes & Conectividad',
     description: 'Switch gestionable de alto rendimiento con 24 puertos Gigabit PoE+ 370W y 4 puertos SFP+ 10G para fibra.',
     tags: ['Managed L3', 'PoE+ 370W', '10G SFP+'],
-    image: '/assets/blog-data-center-guide-1.jpg',
+    image: '/assets/Cableado de Fibra Óptica y Estructurado.jpg',
     popular: true,
     sku: 'CS-L3-24POE',
     stock: true,
@@ -85,7 +86,7 @@ export const PRODUCTS_DATA: Product[] = [
     category: 'Redes & Conectividad',
     description: 'Punto de acceso Wi-Fi 6 empresarial de gran alcance con soporte Mesh, roaming sin cortes y controlador cloud.',
     tags: ['Wi-Fi 6', 'UniFi LR', 'Seamless Roaming'],
-    image: '/assets/distribucion-logistica.webp',
+    image: '/assets/Configuración de Redes WiFi y Radio Enlaces.png',
     popular: true,
     sku: 'UB-U6-LR',
     stock: true,
@@ -98,7 +99,7 @@ export const PRODUCTS_DATA: Product[] = [
     category: 'Redes & Conectividad',
     description: 'Router de alto rendimiento multi-core para enrutamiento corporativo, balanceo de cargas BGP y VPNs.',
     tags: ['CCR 10G', 'BGP Enrutamiento', 'RouterOS'],
-    image: '/assets/aprovisionamiento-y-cmpras.webp',
+    image: '/assets/fortinet-firewalls.png',
     sku: 'MK-CCR1009',
     stock: true,
   },
@@ -112,7 +113,7 @@ export const PRODUCTS_DATA: Product[] = [
     category: 'Infraestructura TI & Energía',
     description: 'Servidor de alta densidad con procesadores Xeon, 64GB RAM ECC, fuentes redundantes y soporte para virtualización.',
     tags: ['Dual Xeon', 'RAM ECC', 'RAID Hardware'],
-    image: '/assets/cloud.avif',
+    image: '/assets/Servidores de Almacenamiento Seguro y Eficiente.png',
     popular: true,
     sku: 'DELL-R640-XEON',
     stock: true,
@@ -137,7 +138,7 @@ export const PRODUCTS_DATA: Product[] = [
     category: 'Infraestructura TI & Energía',
     description: 'Unidad de almacenamiento centralizado NAS con discos de grado empresarial para backups y protección anti-ransomware.',
     tags: ['WD Red Pro', 'RAID 0/1/5/6', 'Backup Cloud'],
-    image: '/assets/porque-somos-diferentes-min.webp',
+    image: '/assets/rack_servidores.jpg',
     sku: 'WD-NAS-4BAY',
     stock: true,
   },
@@ -273,6 +274,18 @@ export default function ProductsSection({ onAddToCart }: ProductsSectionProps) {
                 )}
 
                 <div>
+                  {/* Product Image Container */}
+                  {product.image && (
+                    <div className="relative w-full h-40 rounded-2xl overflow-hidden bg-slate-50 dark:bg-[#162238] border border-slate-200/80 dark:border-slate-700/60 mb-3 flex items-center justify-center p-2 shadow-inner">
+                      <Image
+                        src={product.image}
+                        alt={product.name}
+                        fill
+                        className="object-contain p-2 group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                  )}
+
                   {/* Brand & Category tags */}
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-[10px] font-black text-[#4295DC] bg-[#4295DC]/10 px-2.5 py-0.5 rounded-full border border-[#4295DC]/30">

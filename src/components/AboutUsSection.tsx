@@ -36,7 +36,7 @@ export default function AboutUsSection() {
           <div className="lg:col-span-5 relative flex justify-center">
             <div className="relative w-full aspect-4/3 sm:aspect-16/10 lg:aspect-4/3 rounded-3xl overflow-hidden shadow-2xl border border-slate-200 dark:border-[#4295DC]/30 group">
               <Image
-                src="/assets/porque-somos-diferentes-min.webp"
+                src="/assets/datacenter.jpg"
                 alt="Nosotros EMPROTEC Santa Cruz Bolivia"
                 fill
                 className="object-cover object-center group-hover:scale-105 transition-transform duration-500"

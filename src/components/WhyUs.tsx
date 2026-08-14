@@ -23,7 +23,7 @@ export default function WhyUs() {
             <div className="lg:col-span-5 relative flex justify-center">
               <div className="relative w-full aspect-4/3 rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-[#4295DC]/30">
                 <Image
-                  src="/assets/porque-somos-diferentes-min.webp"
+                  src="/assets/datacenter.jpg"
                   alt="¿Por qué elegir a EMPROTEC?"
                   fill
                   className="object-cover object-center"
@@ -103,7 +103,7 @@ export default function WhyUs() {
             <div className="lg:col-span-5 relative flex justify-center order-1 lg:order-2">
               <div className="relative w-full aspect-4/3 rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-[#4295DC]/30">
                 <Image
-                  src="/assets/aliado-acelaracion-nuevo.webp"
+                  src="/assets/rack_servidores.jpg"
                   alt="Aliado en Ingeniería y TI EMPROTEC"
                   fill
                   className="object-cover object-center"

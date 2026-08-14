@@ -32,7 +32,7 @@ const HERO_SLIDES: HeroSlide[] = [
     title: "Cableado de Fibra Óptica, Estructurado & ",
     subtitleHighlight: "Redes WiFi 6",
     description: "Conexión de alta velocidad con certificación internacional, radio enlaces punto a punto y armados de tableros de red.",
-    image: "/assets/blog-data-center-guide-1.jpg",
+    image: "/assets/Cableado de Fibra Óptica y Estructurado.jpg",
     icon: Network,
   },
   {
@@ -41,7 +41,7 @@ const HERO_SLIDES: HeroSlide[] = [
     title: "Virtualización Cloud, Almacenamiento NAS/SAN & ",
     subtitleHighlight: "Respaldo UPS",
     description: "Infraestructura robusta con prevención de caídas eléctricas, servidores de alta densidad y firewalls UTM perimetrales.",
-    image: "/assets/ups.jpg",
+    image: "/assets/Virtualización de Servicios y Sistemas.png",
     icon: Server,
   },
   {
@@ -50,7 +50,7 @@ const HERO_SLIDES: HeroSlide[] = [
     title: "Automatización de Luces, Portones & ",
     subtitleHighlight: "Climatización de Precisión",
     description: "Smart Home y entornos corporativos automatizados con control inteligente de voz, sensores y filtrado ambiental.",
-    image: "/assets/comercializacion-ventas.webp",
+    image: "/assets/Automatización de Luces y Portones (Domótica).png",
     icon: Cpu,
   },
 ];
@@ -162,13 +162,13 @@ export default function HeroCarousel() {
                 animate={{ opacity: 1, scale: 1, rotate: 0 }}
                 exit={{ opacity: 0, scale: 0.92, rotate: 1 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
-                className="relative w-full aspect-4/3 sm:aspect-16/10 lg:aspect-4/3 rounded-3xl overflow-hidden shadow-2xl border border-[#4295DC]/40 group"
+                className="relative w-full aspect-4/3 sm:aspect-16/10 lg:aspect-4/3 rounded-3xl overflow-hidden shadow-2xl border border-[#4295DC]/40 bg-slate-900/90 flex items-center justify-center p-4 group"
               >
                 <Image
                   src={slide.image}
                   alt={slide.categoryTag}
                   fill
-                  className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                  className="object-contain p-4 group-hover:scale-105 transition-transform duration-700"
                   priority
                 />
 

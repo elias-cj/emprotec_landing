@@ -55,7 +55,7 @@ const SERVICES_CATALOG: ProfessionalServiceItem[] = [
     desc: "Lectores biométricos por reconocimiento facial, huella dactilar y molinetes magnéticos con software de gestión.",
     benefits: ["Registro de asistencias para RRHH", "Apertura magnética de puertas", "Exportación de datos de personal"],
     icon: ShieldCheck,
-    image: "/assets/produccion-fabricacion.webp",
+    image: "/assets/control_de_acceso.webp",
     whatsappMsg: "Hola EMPROTEC, me interesa el servicio de Control de Asistencia y Acceso Biométrico.",
   },
   {
@@ -65,7 +65,7 @@ const SERVICES_CATALOG: ProfessionalServiceItem[] = [
     desc: "Sensores de humo por aspiración temprana, supresión de fuego limpia Novec/FM-200 y cercos infrarrojos.",
     benefits: ["Cero residuos hídricos en Data Centers", "Notificación instantánea a central", "Certificación de seguridad perimetral"],
     icon: Flame,
-    image: "/assets/aliado-acelaracion-nuevo.webp",
+    image: "/assets/sistema-de-alarmas-contra-incendios.webp",
     whatsappMsg: "Hola EMPROTEC, solicito cotización para Alarmas Contra Incendio y Perimetrales.",
   },
   {
@@ -75,7 +75,7 @@ const SERVICES_CATALOG: ProfessionalServiceItem[] = [
     desc: "Frentes de calle IP con cámara HD, pantallas táctiles interiores y apertura de puerta remota desde el celular.",
     benefits: ["Atención de llamadas desde Smartphone", "Integración con cerraduras electrónicas", "Diseño para residencias y edificios"],
     icon: PhoneCall,
-    image: "/assets/servicio-cliente-soporte.webp",
+    image: "/assets/Videoporteros y Audioporteros.jpg",
     whatsappMsg: "Hola EMPROTEC, necesito el servicio de Videoporteros y Audioporteros.",
   },
 
@@ -87,7 +87,7 @@ const SERVICES_CATALOG: ProfessionalServiceItem[] = [
     desc: "Tendido de cableado estructurado certificado Cat 6A/7 y empalmes por fusión de fibra óptica mono/multimodo.",
     benefits: ["Certificación de canal OTDR y Fluke", "Organización profesional de Racks TI", "Máximo rendimiento sin interferencias"],
     icon: Network,
-    image: "/assets/blog-data-center-guide-1.jpg",
+    image: "/assets/Cableado de Fibra Óptica y Estructurado.jpg",
     whatsappMsg: "Hola EMPROTEC, solicito cotización para Cableado de Fibra Óptica y Estructurado.",
   },
   {
@@ -97,7 +97,7 @@ const SERVICES_CATALOG: ProfessionalServiceItem[] = [
     desc: "Distribución de fuerza eléctrica, tableros con protecciones termomagnéticas y mallas de tierra física especializadas.",
     benefits: ["Balanceo de cargas monofásicas y trifásicas", "Protección contra descargas atmosféricas", "Cumplimiento de normas eléctricas"],
     icon: Zap,
-    image: "/assets/aprovisionamiento-y-cmpras.webp",
+    image: "/assets/Cableado y Armado de Tableros Eléctricos.jpg",
     whatsappMsg: "Hola EMPROTEC, necesito cotización para Cableado y Armado de Tableros Eléctricos.",
   },
   {
@@ -107,7 +107,7 @@ const SERVICES_CATALOG: ProfessionalServiceItem[] = [
     desc: "Despliegue de Puntos de Acceso Wi-Fi 6 de alta densidad y radio enlaces inalámbricos punto a punto de larga distancia.",
     benefits: ["Estudio de cobertura RF por mapa de calor", "Redes de invitados aisladas y seguras", "Enlaces de kilómetros sin pérdida"],
     icon: Wifi,
-    image: "/assets/distribucion-logistica.webp",
+    image: "/assets/Configuración de Redes WiFi y Radio Enlaces.png",
     whatsappMsg: "Hola EMPROTEC, me interesa el servicio de Configuración de Redes WiFi y Radio Enlaces.",
   },
 
@@ -119,7 +119,7 @@ const SERVICES_CATALOG: ProfessionalServiceItem[] = [
     desc: "Creación y optimización de plataformas virtuales VMware / Hyper-V y migraciones de servidores a entornos cloud.",
     benefits: ["Alta disponibilidad y failover automático", "Ahorro de energía en Data Centers", "Copias de seguridad de máquinas virtuales"],
     icon: Server,
-    image: "/assets/cloud.avif",
+    image: "/assets/Virtualización de Servicios y Sistemas.png",
     whatsappMsg: "Hola EMPROTEC, requiero asesoría para Virtualización de Servicios y Sistemas.",
   },
   {
@@ -129,7 +129,7 @@ const SERVICES_CATALOG: ProfessionalServiceItem[] = [
     desc: "Seguridad digital perimetral con Firewalls UTM, túneles VPN cifrados para teletrabajo y filtrado de navegación.",
     benefits: ["Prevención de intrusiones e infecciones malware", "Conexión segura de sucursales remotas", "Políticas avanzadas de ancho de banda"],
     icon: Lock,
-    image: "/assets/distribucion-logistica.webp",
+    image: "/assets/fortinet-firewalls.png",
     whatsappMsg: "Hola EMPROTEC, necesito el servicio de VPN & Firewalls para Máxima Protección.",
   },
   {
@@ -139,7 +139,7 @@ const SERVICES_CATALOG: ProfessionalServiceItem[] = [
     desc: "Instalación de sistemas UPS Online doble conversión monofásicos y trifásicos para energía ininterrumpida.",
     benefits: ["Cero micro-cortes en salas de servidores", "Bancos de baterías externas de alta capacidad", "Mantenimiento preventivo de potencia"],
     icon: BatteryCharging,
-    image: "/assets/ups.jpg",
+    image: "/assets/Ups.jpg",
     whatsappMsg: "Hola EMPROTEC, requiero cotización para UPS para Respaldo de Energía.",
   },
   {
@@ -149,7 +149,7 @@ const SERVICES_CATALOG: ProfessionalServiceItem[] = [
     desc: "Configuración de arreglos de almacenamiento NAS/SAN con RAID redundante y esquemas de backup anti-ransomware.",
     benefits: ["Almacenamiento centralizado rápido", "Protección redundante RAID 0/1/5/6/10", "Backups automatizados en sitio y nube"],
     icon: HardDrive,
-    image: "/assets/porque-somos-diferentes-min.webp",
+    image: "/assets/Servidores de Almacenamiento Seguro y Eficiente.png",
     whatsappMsg: "Hola EMPROTEC, me interesa el servicio de Servidores de Almacenamiento Seguro y Eficiente.",
   },
 
@@ -161,7 +161,7 @@ const SERVICES_CATALOG: ProfessionalServiceItem[] = [
     desc: "Sistemas inteligentes para apertura automatizada de portones vehiculares y control programado de iluminación.",
     benefits: ["Brazo electromecánico para portones", "Sensor de detección de presencia vehicular", "Ahorro energético con luces inteligentes"],
     icon: Cpu,
-    image: "/assets/comercializacion-ventas.webp",
+    image: "/assets/Automatización de Luces y Portones (Domótica).png",
     whatsappMsg: "Hola EMPROTEC, solicito cotización para Automatización de Luces y Portones.",
   },
   {
@@ -171,7 +171,7 @@ const SERVICES_CATALOG: ProfessionalServiceItem[] = [
     desc: "Integración de Smart Home con control por voz (Alexa, Google, Siri), persianas automatizadas y escenas de confort.",
     benefits: ["Control centralizado desde App móvil", "Escenas personalizadas de iluminación", "Ahorro en climatización"],
     icon: Home,
-    image: "/assets/comercializacion-ventas.webp",
+    image: "/assets/Automatización de Luces y Portones (Domótica).png",
     whatsappMsg: "Hola EMPROTEC, deseo información sobre soluciones de Domótica.",
   },
 ];

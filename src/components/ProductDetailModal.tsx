@@ -52,7 +52,7 @@ export default function ProductDetailModal({
                   src={product.image || "/assets/blog-data-center-guide-1.jpg"}
                   alt={product.name}
                   fill
-                  className="object-cover object-center"
+                  className="object-contain p-2"
                 />
               </div>
 

@@ -35,7 +35,7 @@ const SOLUTIONS_DATA: SolutionOption[] = [
     shortTag: "Data Center & Servidores",
     desc: "Aprovisionamiento de servidores físicos de alta densidad, almacenamiento SAN/NAS redundante y clústeres virtuales.",
     icon: Server,
-    image: "/assets/cloud.avif",
+    image: "/assets/Virtualización de Servicios y Sistemas.png",
     features: [
       "Servidores tipo Rack / Tower Xeon & Epyc",
       "Arreglos de discos RAID 0/1/5/6/10 anti-ransomware",
@@ -50,7 +50,7 @@ const SOLUTIONS_DATA: SolutionOption[] = [
     shortTag: "Fibra Óptica & Wi-Fi 6",
     desc: "Diseño y tendido de cableado estructurado Cat 6A / 7, fusión de fibra óptica y enlaces inalámbricos punto a punto.",
     icon: Network,
-    image: "/assets/blog-data-center-guide-1.jpg",
+    image: "/assets/Cableado de Fibra Óptica y Estructurado.jpg",
     features: [
       "Certificación Fluke Networks de puntos de red",
       "Configuración de VLANs & Enrutamiento BGP/OSPF",
@@ -65,7 +65,7 @@ const SOLUTIONS_DATA: SolutionOption[] = [
     shortTag: "CCTV 4K & Biometría",
     desc: "Sistemas integrados de videovigilancia IP ColorVu, control de acceso biométrico, torniquetes y alarmas contra incendio.",
     icon: ShieldCheck,
-    image: "/assets/cctv.jpg",
+    image: "/assets/control_de_acceso.webp",
     features: [
       "Cámaras UltraHD con analítica de Inteligencia Artificial",
       "Reconocimiento facial y control de asistencia",
@@ -80,7 +80,7 @@ const SOLUTIONS_DATA: SolutionOption[] = [
     shortTag: "UPS Online & Tableros",
     desc: "Sistemas UPS de doble conversión senoidal pura, tableros de transferencia automática y grupos electrógenos.",
     icon: Zap,
-    image: "/assets/ups.jpg",
+    image: "/assets/Cableado y Armado de Tableros Eléctricos.jpg",
     features: [
       "Protección contra apagones, picos y armónicos",
       "Armado y mantenimiento de tableros eléctricos TI",
@@ -95,7 +95,7 @@ const SOLUTIONS_DATA: SolutionOption[] = [
     shortTag: "Control de Humedad TI",
     desc: "Unidades de aire acondicionado in-row y periférico de alta precisión para salas de cómputo y servidores.",
     icon: Wind,
-    image: "/assets/comercializacion-ventas.webp",
+    image: "/assets/datacenter.jpg",
     features: [
       "Control riguroso de humedad y temperatura 24/7",
       "Sistemas redundantes N+1 para cero caídas",
@@ -110,7 +110,7 @@ const SOLUTIONS_DATA: SolutionOption[] = [
     shortTag: "VPN, Firewalls & Portones",
     desc: "Outsourcing informático, virtualización de escritorios, VPN empresariales y automatización de accesos y portones.",
     icon: Cpu,
-    image: "/assets/produccion-fabricacion.webp",
+    image: "/assets/Automatización de Luces y Portones (Domótica).png",
     features: [
       "Protección con Firewalls UTM Fortinet & Mikrotik",
       "Automatización de portones y luces inteligentes",
@@ -210,12 +210,12 @@ export default function InteractiveSolutionsExplorer() {
                 className="bg-white dark:bg-[#1E293B] rounded-3xl p-6 sm:p-10 shadow-xl border border-slate-200/90 dark:border-slate-700/60 space-y-6"
               >
                 {/* Visual Image Banner */}
-                <div className="relative w-full h-56 sm:h-72 rounded-2xl overflow-hidden shadow-lg bg-slate-800 border border-slate-200 dark:border-slate-700/60">
+                <div className="relative w-full h-56 sm:h-72 rounded-2xl overflow-hidden shadow-lg bg-slate-900 dark:bg-[#0F172A] border border-slate-200 dark:border-slate-700/60 flex items-center justify-center">
                   <Image
                     src={activeSol.image}
                     alt={activeSol.title}
                     fill
-                    className="object-cover object-center brightness-95"
+                    className="object-contain p-4 brightness-95"
                     priority
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/80 via-transparent to-transparent pointer-events-none" />

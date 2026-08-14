@@ -21,7 +21,7 @@ const STAGES: TimelineStage[] = [
     subtitle: "Levantamiento de requerimientos en sitio",
     desc: "Evaluamos la infraestructura existente, cuellos de botella de red y riesgos de seguridad física y lógica.",
     icon: Search,
-    image: "/assets/produccion-fabricacion.webp",
+    image: "/assets/cctv.jpg",
   },
   {
     num: "02",
@@ -29,7 +29,7 @@ const STAGES: TimelineStage[] = [
     subtitle: "Planos de ingeniería & cálculo de cargas",
     desc: "Diseñamos la arquitectura de red, cálculo de respaldo eléctrico UPS y esquema de videovigilancia CCTV a medida.",
     icon: Compass,
-    image: "/assets/blog-data-center-guide-1.jpg",
+    image: "/assets/Cableado de Fibra Óptica y Estructurado.jpg",
   },
   {
     num: "03",
@@ -37,7 +37,7 @@ const STAGES: TimelineStage[] = [
     subtitle: "Instalación llave en mano sin intermediarios",
     desc: "Montaje de racks, tendido y certificación de fibra óptica, armado de tableros eléctricos y configuración de servidores.",
     icon: Wrench,
-    image: "/assets/aprovisionamiento-y-cmpras.webp",
+    image: "/assets/Cableado y Armado de Tableros Eléctricos.jpg",
   },
   {
     num: "04",
@@ -45,7 +45,7 @@ const STAGES: TimelineStage[] = [
     subtitle: "Pruebas de estrés & auditoría de rendimiento",
     desc: "Validamos el balanceo de carga, calidad de servicio QoS en Wi-Fi 6 y redundancia ante fallos eléctricos.",
     icon: Sliders,
-    image: "/assets/distribucion-logistica.webp",
+    image: "/assets/Configuración de Redes WiFi y Radio Enlaces.png",
   },
   {
     num: "05",
@@ -53,7 +53,7 @@ const STAGES: TimelineStage[] = [
     subtitle: "Mantenimiento proactivo & guardias 24/7",
     desc: "Contratos de tercerización IT, soporte preventivo continuo y asistencia técnica ante cualquier eventualidad.",
     icon: Headphones,
-    image: "/assets/servicio-cliente-soporte.webp",
+    image: "/assets/Virtualización de Servicios y Sistemas.png",
   },
 ];
 
