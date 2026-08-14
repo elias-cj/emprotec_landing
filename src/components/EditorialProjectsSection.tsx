@@ -30,7 +30,7 @@ export default function EditorialProjectsSection() {
       title: "Control de Acceso Biométrico & Torniquetes",
       client: "Centro Comercial",
       category: "Biometría",
-      image: "/assets/gestion-de-inventarios.webp",
+      image: "/assets/Control de Acceso Biométrico & Torniquetes.png",
     },
   ];
 

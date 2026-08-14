@@ -88,7 +88,7 @@ export const EMPROTEC_12_ITEMS: CatalogItem[] = [
     brand: 'EMPROTEC Certificado',
     description: 'Instalación y configuración de torniquetes, biometría facial y marcación de personal.',
     tags: ['Biometría', 'Servicio'],
-    image: '/assets/control_de_acceso.webp',
+    image: '/assets/Control de Acceso Biométrico & Torniquetes.png',
     itemType: 'servicio',
   },
   {

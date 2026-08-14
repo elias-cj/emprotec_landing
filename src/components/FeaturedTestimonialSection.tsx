@@ -24,15 +24,15 @@ export default function FeaturedTestimonialSection() {
           transition={{ duration: 0.6 }}
           className="bg-[#1E293B] dark:bg-[#1E293B] text-white rounded-3xl overflow-hidden shadow-2xl border border-slate-700 dark:border-slate-700/60 grid grid-cols-1 lg:grid-cols-12 items-center"
         >
-          {/* Left Large Client Portrait */}
-          <div className="lg:col-span-5 relative h-[380px] lg:h-[500px]">
+          {/* Left Large Client Banner */}
+          <div className="lg:col-span-5 relative h-[300px] lg:h-[450px] bg-slate-900 flex items-center justify-center p-4">
             <Image
-              src="/assets/talento-joven.png"
-              alt="Cliente Testimonio EMPROTEC"
+              src="/assets/logo/fidalga_baner.webp"
+              alt="Testimonio Fidalga EMPROTEC"
               fill
-              className="object-cover object-center"
+              className="object-contain p-4"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#1E293B]/90 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-[#1E293B] pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#1E293B]/80 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-[#1E293B] pointer-events-none" />
           </div>
 
           {/* Right Quote & Details */}
@@ -48,15 +48,15 @@ export default function FeaturedTestimonialSection() {
             <Quote className="w-12 h-12 text-[#4295DC]/40" />
 
             <blockquote className="text-xl sm:text-2xl lg:text-3xl font-bold font-['Raleway'] leading-relaxed tracking-tight text-white">
-              "EMPROTEC transformó la infraestructura de nuestro centro logístico en Santa Cruz. La migración a cableado de fibra y cámaras 4K fue impecable, sin detener nuestras operaciones en ningún momento."
+              "EMPROTEC transformó la seguridad electrónica e infraestructura tecnológica en nuestras sucursales. La calidad de sus instalaciones y el respaldo continuo garantizan la tranquilidad de nuestras operaciones 24/7."
             </blockquote>
 
             <div className="pt-4 border-t border-slate-700 dark:border-slate-700/60">
               <h4 className="text-lg font-black text-white font-['Raleway']">
-                Ing. Carlos Mendoza
+                Supermercados Fidalga
               </h4>
               <p className="text-xs text-[#4295DC] font-semibold">
-                Director de Infraestructura & Operaciones — Grupo Logístico Bolivia
+                Gerencia de Operaciones & Tecnología — Bolivia
               </p>
             </div>
 

@@ -21,7 +21,7 @@ const STAGES: TimelineStage[] = [
     subtitle: "Levantamiento de requerimientos en sitio",
     desc: "Evaluamos la infraestructura existente, cuellos de botella de red y riesgos de seguridad física y lógica.",
     icon: Search,
-    image: "/assets/cctv.jpg",
+    image: "/assets/lavantamiento de requerimientos.jpg",
   },
   {
     num: "02",

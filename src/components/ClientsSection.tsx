@@ -15,7 +15,7 @@ const CLIENT_LOGOS: ClientLogoItem[] = [
   {
     id: "fidalga",
     name: "Supermercados Fidalga",
-    fallbackText: "FIDALGA",
+    logoSrc: "/assets/logo/fidalga.webp",
   },
   {
     id: "nur",

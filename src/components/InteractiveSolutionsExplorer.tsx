@@ -65,7 +65,7 @@ const SOLUTIONS_DATA: SolutionOption[] = [
     shortTag: "CCTV 4K & Biometría",
     desc: "Sistemas integrados de videovigilancia IP ColorVu, control de acceso biométrico, torniquetes y alarmas contra incendio.",
     icon: ShieldCheck,
-    image: "/assets/control_de_acceso.webp",
+    image: "/assets/Control de Acceso Biométrico & Torniquetes.png",
     features: [
       "Cámaras UltraHD con analítica de Inteligencia Artificial",
       "Reconocimiento facial y control de asistencia",

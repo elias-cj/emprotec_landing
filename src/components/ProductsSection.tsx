@@ -47,7 +47,7 @@ export const PRODUCTS_DATA: Product[] = [
     category: 'Seguridad & Control',
     description: 'Control de acceso y asistencia con lectura facial ultra rápida a distancia y exportación a software de RRHH.',
     tags: ['Recon. Facial', 'Huella', 'Control Puertas'],
-    image: '/assets/control_de_acceso.webp',
+    image: '/assets/Control de Acceso Biométrico & Torniquetes.png',
     sku: 'ZK-[#0E315B]-FACIAL',
     stock: true,
   },

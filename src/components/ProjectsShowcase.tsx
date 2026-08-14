@@ -54,7 +54,7 @@ const PROJECTS_DATA: ProjectItem[] = [
     category: "Control de Acceso",
     desc: "Automatización de ingreso de personal y visitantes mediante terminales de reconocimiento facial de alta velocidad.",
     solution: "Instalación de 8 torniquetes con biometría ZKTeco integrada al software de recursos humanos e impresoras de badges.",
-    image: "/assets/control_de_acceso.webp",
+    image: "/assets/Control de Acceso Biométrico & Torniquetes.png",
     results: ["Verificación en menos de 0.3 segundos", "Eliminación de tarjetas físicas duplicadas", "Reportes automatizados de asistencia"],
   },
   {

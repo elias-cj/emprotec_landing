@@ -55,7 +55,7 @@ const SERVICES_CATALOG: ProfessionalServiceItem[] = [
     desc: "Lectores biométricos por reconocimiento facial, huella dactilar y molinetes magnéticos con software de gestión.",
     benefits: ["Registro de asistencias para RRHH", "Apertura magnética de puertas", "Exportación de datos de personal"],
     icon: ShieldCheck,
-    image: "/assets/control_de_acceso.webp",
+    image: "/assets/Control de Acceso Biométrico & Torniquetes.png",
     whatsappMsg: "Hola EMPROTEC, me interesa el servicio de Control de Asistencia y Acceso Biométrico.",
   },
   {
