@@ -35,7 +35,7 @@ const SOLUTIONS_DATA: SolutionOption[] = [
     shortTag: "Data Center & Servidores",
     desc: "Aprovisionamiento de servidores físicos de alta densidad, almacenamiento SAN/NAS redundante y clústeres virtuales.",
     icon: Server,
-    image: "/assets/Virtualización de Servicios y Sistemas.png",
+    image: "/assets/infraestructura tecnologica.jpg",
     features: [
       "Servidores tipo Rack / Tower Xeon & Epyc",
       "Arreglos de discos RAID 0/1/5/6/10 anti-ransomware",
@@ -65,7 +65,7 @@ const SOLUTIONS_DATA: SolutionOption[] = [
     shortTag: "CCTV 4K & Biometría",
     desc: "Sistemas integrados de videovigilancia IP ColorVu, control de acceso biométrico, torniquetes y alarmas contra incendio.",
     icon: ShieldCheck,
-    image: "/assets/Control de Acceso Biométrico & Torniquetes.png",
+    image: "/assets/control_de_acceso.webp",
     features: [
       "Cámaras UltraHD con analítica de Inteligencia Artificial",
       "Reconocimiento facial y control de asistencia",

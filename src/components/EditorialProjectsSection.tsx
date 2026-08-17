@@ -48,14 +48,6 @@ export default function EditorialProjectsSection() {
               Nuestros <span className="text-[#4295DC]">proyectos destacados</span>
             </h2>
           </div>
-
-          <a
-            href="#contacto"
-            className="text-xs font-extrabold text-[#4295DC] uppercase tracking-wider hover:underline flex items-center gap-1"
-          >
-            <span>Ver portafolio completo</span>
-            <ArrowUpRight className="w-4 h-4" />
-          </a>
         </div>
 
         {/* Asymmetrical Magazine Layout: 1 Hero Project Left (Span 7) + 3 Secondary Right (Span 5) */}
