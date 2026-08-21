@@ -87,10 +87,10 @@ export default function Footer() {
               <a href="https://wa.me/59171322727" target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-white hover:bg-[#4295DC] hover:text-white dark:hover:bg-[#4295DC] transition-colors shadow-sm" aria-label="WhatsApp">
                 <MessageCircle className="w-4 h-4" />
               </a>
-              <a href="#" className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-white hover:bg-[#4295DC] hover:text-white dark:hover:bg-[#4295DC] transition-colors shadow-sm" aria-label="Facebook">
+              <a href="https://www.facebook.com/emprotecbolivia/?locale=es_LA" target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-white hover:bg-[#4295DC] hover:text-white dark:hover:bg-[#4295DC] transition-colors shadow-sm" aria-label="Facebook">
                 <Facebook className="w-4 h-4" />
               </a>
-              <a href="#" className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-white hover:bg-[#4295DC] hover:text-white dark:hover:bg-[#4295DC] transition-colors shadow-sm" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/richard-burgos-coimbra/" target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-white hover:bg-[#4295DC] hover:text-white dark:hover:bg-[#4295DC] transition-colors shadow-sm" aria-label="LinkedIn">
                 <Linkedin className="w-4 h-4" />
               </a>
               <a href="#" className="p-2.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-white hover:bg-[#4295DC] hover:text-white dark:hover:bg-[#4295DC] transition-colors shadow-sm" aria-label="Instagram">

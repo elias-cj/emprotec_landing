@@ -18,8 +18,8 @@ const lato = Lato({
 export const metadata: Metadata = {
   metadataBase: new URL("https://emprotec.com.bo"),
   title: {
-    default: "EMPROTEC | Soluciones Tecnológicas, Ciberseguridad e Infraestructura TI en Bolivia",
-    template: "%s | EMPROTEC Bolivia",
+    default: "EMPROTEC",
+    template: "%s | EMPROTEC",
   },
   description:
     "Líder en soluciones de ingeniería e infraestructura tecnológica en Santa Cruz, Bolivia: Redes de Fibra Óptica, Servidores, Data Center, CCTV 4K, Ciberseguridad, UPS Online y Domótica.",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     canonical: "https://emprotec.com.bo/",
   },
   openGraph: {
-    title: "EMPROTEC | Soluciones Tecnológicas e Ingeniería de Infraestructura TI",
+    title: "EMPROTEC",
     description:
       "Diseñamos e instalamos soluciones de alta disponibilidad: Redes de Fibra Óptica, CCTV 4K, Data Centers, UPS y Domótica en Santa Cruz, Bolivia.",
     url: "https://emprotec.com.bo",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "EMPROTEC | Soluciones Tecnológicas e Ingeniería de Infraestructura TI",
+    title: "EMPROTEC",
     description:
       "Diseñamos e instalamos soluciones de alta disponibilidad: Redes de Fibra Óptica, CCTV 4K, Data Centers, UPS y Domótica en Santa Cruz, Bolivia.",
     images: ["/assets/logo/logo_emprotec.png"],
@@ -84,9 +84,9 @@ export const metadata: Metadata = {
   },
   manifest: "/manifest.json",
   icons: {
-    icon: "/assets/logo/logo_emprotec.png",
-    shortcut: "/assets/logo/logo_emprotec.png",
-    apple: "/assets/logo/logo_emprotec.png",
+    icon: "/logos_clientes/logo.ico",
+    shortcut: "/logos_clientes/logo.ico",
+    apple: "/logos_clientes/logo.ico",
   },
 };
 

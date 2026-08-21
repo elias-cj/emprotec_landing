@@ -8,6 +8,7 @@ export interface ClientLogoItem {
   id: string;
   name: string;
   logoSrc?: string;
+  logoSrcDark?: string;
   fallbackText?: string;
 }
 
@@ -20,7 +21,8 @@ const CLIENT_LOGOS: ClientLogoItem[] = [
   {
     id: "nur",
     name: "NUR Srl",
-    logoSrc: "/logos_clientes/nur.png",
+    logoSrc: "/logos_clientes/nur_modo_claro.png",
+    logoSrcDark: "/logos_clientes/nur_modo_oscuro.png",
   },
   {
     id: "orbol",
@@ -56,6 +58,7 @@ const CLIENT_LOGOS: ClientLogoItem[] = [
     id: "zuka",
     name: "Grupo Zuka",
     fallbackText: "GRUPO ZUKA",
+    logoSrc: "/logos_clientes/zucar.jpeg",
   },
 ];
 
@@ -130,13 +133,32 @@ export default function ClientsSection() {
               >
                 {client.logoSrc ? (
                   <div className="relative w-44 sm:w-56 h-20 sm:h-24 flex items-center justify-center p-3 rounded-2xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 shadow-md group-hover:shadow-xl group-hover:border-[#4295DC]/60 transition-all">
-                    <Image
-                      src={client.logoSrc}
-                      alt={client.name}
-                      width={220}
-                      height={100}
-                      className="max-h-16 sm:max-h-20 w-auto object-contain filter opacity-95 group-hover:opacity-100 dark:brightness-110 group-hover:scale-105 transition-all duration-300"
-                    />
+                    {client.logoSrcDark ? (
+                      <>
+                        <Image
+                          src={client.logoSrc}
+                          alt={client.name}
+                          width={220}
+                          height={100}
+                          className="max-h-16 sm:max-h-20 w-auto object-contain filter opacity-95 group-hover:opacity-100 dark:hidden group-hover:scale-105 transition-all duration-300"
+                        />
+                        <Image
+                          src={client.logoSrcDark}
+                          alt={client.name}
+                          width={220}
+                          height={100}
+                          className="max-h-16 sm:max-h-20 w-auto object-contain filter opacity-95 group-hover:opacity-100 hidden dark:block dark:brightness-110 group-hover:scale-105 transition-all duration-300"
+                        />
+                      </>
+                    ) : (
+                      <Image
+                        src={client.logoSrc}
+                        alt={client.name}
+                        width={220}
+                        height={100}
+                        className="max-h-16 sm:max-h-20 w-auto object-contain filter opacity-95 group-hover:opacity-100 dark:brightness-110 group-hover:scale-105 transition-all duration-300"
+                      />
+                    )}
                   </div>
                 ) : (
                   <div className="w-44 sm:w-56 h-20 sm:h-24 flex flex-col items-center justify-center px-4 text-center rounded-2xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 group-hover:border-[#4295DC] shadow-md group-hover:shadow-xl transition-all">
